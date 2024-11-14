@@ -1,14 +1,14 @@
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 
 import { Locale, routing } from '@/i18n/routing';
 
-export async function generateStaticParams() {
-  return [{ locale: 'de-DE' }, { locale: 'en-US' }];
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function Root({
+export default async function LocaleLayout({
   children,
   params,
 }: {
@@ -20,6 +20,8 @@ export default async function Root({
   if (!routing.locales.includes(locale)) {
     notFound();
   }
+
+  setRequestLocale(locale);
 
   const messages = await getMessages();
 
