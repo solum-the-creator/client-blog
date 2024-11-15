@@ -42,7 +42,9 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     <html lang={locale}>
       <body className={sen.className}>
         <Header />
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
+          <main>{children}</main>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
