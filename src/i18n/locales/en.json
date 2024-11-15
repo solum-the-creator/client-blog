@@ -2,5 +2,17 @@
   "HomePage": {
     "title": "Hello world",
     "subtitle": "This is a subtitle"
+  },
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About Us",
+    "contact": "Contact Us"
+  },
+  "Buttons": {
+    "video": "Video about us"
+  },
+  "Logo": {
+    "title": "Modsen Client Blog"
   }
 }

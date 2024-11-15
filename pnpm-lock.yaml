@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@solumzy/ui-lib-client-blog':
-        specifier: ^1.0.1
-        version: 1.0.1(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
+        specifier: ^1.0.3
+        version: 1.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
       next:
         specifier: 15.0.3
         version: 15.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)(sass@1.80.7)
@@ -468,8 +468,8 @@ packages:
   '@rushstack/eslint-patch@1.10.4':
     resolution: {integrity: sha512-WJgX9nzTqknM393q1QJDJmoW28kUfEnybeTfVNcNAPnIx210RXm2DiXiHzfNPJNIUUb1tJnz/l4QGtJ30PgWmA==}
 
-  '@solumzy/ui-lib-client-blog@1.0.1':
-    resolution: {integrity: sha512-2qH3D2zqMJ5mQcxBqlYxYqQTGXy1ycQec01PnhjbXncKw6zDGqsLL0+qypkNUNopHwTOVQaIijOZtd+CdZOZwQ==}
+  '@solumzy/ui-lib-client-blog@1.0.3':
+    resolution: {integrity: sha512-KzPowQ+UMHx04eV47JmQk4jntzm1PPtuHeu6hUQLuS1wpTllbPuXjs5sNMzuilKomogzskA1NNZm7PBFm26bpQ==}
     peerDependencies:
       react: ^18.3.1
       react-dom: ^18.3.1
@@ -2452,7 +2452,7 @@ snapshots:
 
   '@rushstack/eslint-patch@1.10.4': {}
 
-  '@solumzy/ui-lib-client-blog@1.0.1(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)':
+  '@solumzy/ui-lib-client-blog@1.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)':
     dependencies:
       react: 19.0.0-rc-66855b96-20241106
       react-dom: 19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106)

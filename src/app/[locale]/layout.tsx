@@ -1,20 +1,33 @@
+import { Metadata } from 'next';
+import { Sen } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 
+import { Header } from '@/components/header/header';
 import { Locale, routing } from '@/i18n/routing';
 
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
+import '@solumzy/ui-lib-client-blog/dist/index.css';
+import '@/app/styles/global.scss';
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: {
+const sen = Sen({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'] });
+
+export const generateStaticParams = () => {
+  return routing.locales.map((locale) => ({ locale }));
+};
+
+export const metadata: Metadata = {
+  title: 'Client Blog',
+};
+
+type RootLayoutProps = {
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
-}) {
+  params: Promise<{
+    locale: Locale;
+  }>;
+};
+
+export default async function RootLayout({ children, params }: RootLayoutProps) {
   const { locale } = await params;
 
   if (!routing.locales.includes(locale)) {
@@ -27,7 +40,8 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body>
+      <body className={sen.className}>
+        <Header />
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>
