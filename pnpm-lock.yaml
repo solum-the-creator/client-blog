@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@solumzy/ui-lib-client-blog':
-        specifier: ^1.0.3
-        version: 1.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
+        specifier: ^1.0.4
+        version: 1.0.4(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
       next:
         specifier: 15.0.3
         version: 15.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)(sass@1.80.7)
@@ -39,6 +39,9 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.3.1
+      classnames:
+        specifier: ^2.5.1
+        version: 2.5.1
       eslint:
         specifier: ^8
         version: 8.57.1
@@ -468,8 +471,8 @@ packages:
   '@rushstack/eslint-patch@1.10.4':
     resolution: {integrity: sha512-WJgX9nzTqknM393q1QJDJmoW28kUfEnybeTfVNcNAPnIx210RXm2DiXiHzfNPJNIUUb1tJnz/l4QGtJ30PgWmA==}
 
-  '@solumzy/ui-lib-client-blog@1.0.3':
-    resolution: {integrity: sha512-KzPowQ+UMHx04eV47JmQk4jntzm1PPtuHeu6hUQLuS1wpTllbPuXjs5sNMzuilKomogzskA1NNZm7PBFm26bpQ==}
+  '@solumzy/ui-lib-client-blog@1.0.4':
+    resolution: {integrity: sha512-jNb+GNZ8UlP7zl0Ji/Ryr5obj/yecA/b888l9dutxbWBwhpv7VedsD9p0eaIj2uAgpSg9hZ2Wi5WjTdQp4eotQ==}
     peerDependencies:
       react: ^18.3.1
       react-dom: ^18.3.1
@@ -694,6 +697,9 @@ packages:
   chokidar@4.0.1:
     resolution: {integrity: sha512-n8enUVCED/KVRQlab1hr3MVpcVMvxtZjmEa956u+4YijlmQED223XMSYj2tLuKvr4jcCTzNNMpQDUer72MMmzA==}
     engines: {node: '>= 14.16.0'}
+
+  classnames@2.5.1:
+    resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
 
   cli-cursor@5.0.0:
     resolution: {integrity: sha512-aCj4O5wKyszjMmDT4tZj93kxyydN/K5zPWSCe6/0AV/AA1pqe5ZBIw0a2ZfPQV7lL5/yb5HsUreJ6UFAF1tEQw==}
@@ -2452,7 +2458,7 @@ snapshots:
 
   '@rushstack/eslint-patch@1.10.4': {}
 
-  '@solumzy/ui-lib-client-blog@1.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)':
+  '@solumzy/ui-lib-client-blog@1.0.4(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)':
     dependencies:
       react: 19.0.0-rc-66855b96-20241106
       react-dom: 19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106)
@@ -2728,6 +2734,8 @@ snapshots:
   chokidar@4.0.1:
     dependencies:
       readdirp: 4.0.2
+
+  classnames@2.5.1: {}
 
   cli-cursor@5.0.0:
     dependencies:

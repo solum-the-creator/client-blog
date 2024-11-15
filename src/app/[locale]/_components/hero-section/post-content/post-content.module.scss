@@ -1,0 +1,28 @@
+.postWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 50rem;
+
+  @media screen and (max-width: 512px) {
+    gap: 1rem;
+  }
+
+  .postBody {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .description {
+    max-width: 38rem;
+  }
+
+  .category {
+    font-weight: 800;
+  }
+
+  .buttonWrapper {
+    margin-top: 1.5rem;
+  }
+}
