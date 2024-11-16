@@ -15,13 +15,13 @@ type HoverablePostCardProps = {
 
 export const HoverablePostCard: React.FC<HoverablePostCardProps> = ({ title, author, date }) => {
   return (
-    <Link href={paths.blog}>
-      <div className={styles.hoverablePostCard}>
-        <PostByLabel authorName={author} date={date} colorVariant="secondary" />
+    <div className={styles.hoverablePostCard}>
+      <PostByLabel authorName={author} date={date} colorVariant="secondary" />
+      <Link href={paths.blog}>
         <Heading level={4} className={styles.title}>
           {title}
         </Heading>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };

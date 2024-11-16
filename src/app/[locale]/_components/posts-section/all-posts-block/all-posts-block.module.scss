@@ -1,0 +1,21 @@
+.allPostsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .viewAll {
+      color: $purple;
+      font-size: 1rem;
+    }
+  }
+
+  .postsList {
+    display: flex;
+    flex-direction: column;
+  }
+}
