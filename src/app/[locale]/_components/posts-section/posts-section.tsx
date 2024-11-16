@@ -6,8 +6,10 @@ import styles from './posts-section.module.scss';
 export const PostsSection = () => {
   return (
     <section className={styles.postsSection}>
-      <FeaturedPostBlock />
-      <AllPostsBlock />
+      <div className={styles.container}>
+        <FeaturedPostBlock />
+        <AllPostsBlock />
+      </div>
     </section>
   );
 };
