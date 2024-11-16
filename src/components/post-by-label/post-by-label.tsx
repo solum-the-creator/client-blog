@@ -1,13 +1,14 @@
 import classnames from 'classnames';
 
 import { Link } from '@/i18n/routing';
+import { LabelColorVariant } from '@/types/colors';
 
 import styles from './post-by-label.module.scss';
 
 type PostByLabelProps = {
   authorName: string;
   date: string;
-  colorVariant?: 'accent' | 'primary';
+  colorVariant?: LabelColorVariant;
 };
 
 export const PostByLabel: React.FC<PostByLabelProps> = ({
