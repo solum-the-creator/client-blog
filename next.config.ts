@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
                     $stroke: #4c4c4c;
                     $strokeLight: #e8e8e9;
                     $secondary: #ffffff;
+                    $secondaryText: #6d6e76;
                     $secondaryBackground: #f4f4f4;`,
   },
 };
