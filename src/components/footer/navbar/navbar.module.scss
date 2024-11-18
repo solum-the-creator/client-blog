@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+
+  .list {
+    display: flex;
+    gap: 1.5rem;
+
+    .item {
+      color: $secondary;
+    }
+  }
+}
