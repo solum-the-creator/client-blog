@@ -1,0 +1,77 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  .trackWrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    .message {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .author {
+      font-weight: bold;
+    }
+
+    .navigation {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  .button {
+    cursor: pointer;
+    border: none;
+    background-color: $primary;
+    color: $secondary;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+
+    .icon {
+      margin-top: -0.2rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    &:disabled {
+      background-color: $secondary;
+      color: $primary;
+      cursor: not-allowed;
+    }
+  }
+}

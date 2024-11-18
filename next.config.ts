@@ -17,6 +17,15 @@ const nextConfig: NextConfig = {
                     $secondaryText: #6d6e76;
                     $secondaryBackground: #f4f4f4;`,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.gravatar.com',
+        pathname: '/avatar/**',
+      },
+    ],
+  },
 };
 
 export default withNextIntl(nextConfig);
