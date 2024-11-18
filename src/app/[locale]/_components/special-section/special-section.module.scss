@@ -1,0 +1,49 @@
+.specialSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+  padding: 0 5rem;
+
+  .content {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    .imageWrapper {
+      position: relative;
+      width: 75%;
+      height: auto;
+
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .contentBlock {
+      position: absolute;
+      right: 0;
+      width: 57%;
+      background-color: $secondary;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      padding: 5rem;
+
+      .title {
+        margin-top: 0.5rem;
+        letter-spacing: -2px;
+      }
+
+      .readMore {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

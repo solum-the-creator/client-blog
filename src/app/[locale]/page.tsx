@@ -2,6 +2,7 @@ import { AboutSection } from './_components/about-section/about-section';
 import { CategorySection } from './_components/category-section/category-section';
 import { HeroSection } from './_components/hero-section/hero-section';
 import { PostsSection } from './_components/posts-section/posts-section';
+import { SpecialSection } from './_components/special-section/special-section';
 
 export default async function HomePage() {
   // const data = await fetch('https://673665a2aafa2ef22230699e.mockapi.io/api/v1/posts');
@@ -13,6 +14,7 @@ export default async function HomePage() {
       <PostsSection />
       <AboutSection />
       <CategorySection />
+      <SpecialSection />
     </>
   );
 }
