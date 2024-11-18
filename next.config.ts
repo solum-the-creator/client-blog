@@ -13,7 +13,8 @@ const nextConfig: NextConfig = {
                     $purpleLight: #f4f0f8;
                     $stroke: #4c4c4c;
                     $strokeLight: #e8e8e9;
-                    $secondary: #ffffff;`,
+                    $secondary: #ffffff;
+                    $secondaryBackground: #f4f4f4;`,
   },
 };
 

@@ -1,4 +1,5 @@
 import { AboutSection } from './_components/about-section/about-section';
+import { AuthorsSection } from './_components/authors-section/authors-section';
 import { CategorySection } from './_components/category-section/category-section';
 import { HeroSection } from './_components/hero-section/hero-section';
 import { PostsSection } from './_components/posts-section/posts-section';
@@ -15,6 +16,7 @@ export default async function HomePage() {
       <AboutSection />
       <CategorySection />
       <SpecialSection />
+      <AuthorsSection />
     </>
   );
 }

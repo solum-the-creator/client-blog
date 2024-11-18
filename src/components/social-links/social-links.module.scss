@@ -1,0 +1,28 @@
+.socialLinks {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  &.horizontal {
+    flex-direction: row;
+  }
+
+  &.vertical {
+    flex-direction: column;
+  }
+
+  &.primary {
+    .icon {
+      filter: none;
+    }
+  }
+
+  &.secondary {
+    .icon {
+      filter: brightness(0) saturate(100%) invert(43%) sepia(2%) saturate(1150%) hue-rotate(196deg)
+        brightness(101%) contrast(98%);
+    }
+  }
+}

@@ -20,7 +20,7 @@ export const SpecialSection = () => {
             It started out as a simple idea and evolved into
             <br /> our passion
           </Heading>
-          <Text>
+          <Text variant="secondary">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip.
