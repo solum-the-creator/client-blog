@@ -1,3 +1,5 @@
+import { JoinOurTeamSection } from '@/components/join-our-team-section/join-our-team-section';
+
 import { AboutSection } from './_components/about-section/about-section';
 import { AuthorsSection } from './_components/authors-section/authors-section';
 import { CategorySection } from './_components/category-section/category-section';
@@ -21,6 +23,7 @@ export default async function HomePage() {
       <AuthorsSection />
       <FeaturedLogoSection />
       <TestimonialsSection />
+      <JoinOurTeamSection />
     </>
   );
 }

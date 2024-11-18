@@ -1,0 +1,28 @@
+.joinOurTeamSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 4rem;
+
+  .content {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .textBlock {
+      max-width: 26rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+
+      .title {
+        letter-spacing: -2px;
+      }
+    }
+  }
+}
