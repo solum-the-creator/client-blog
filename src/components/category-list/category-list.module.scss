@@ -1,0 +1,14 @@
+.categoryList {
+  width: 100%;
+  display: flex;
+
+  &.horizontal {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  &.vertical {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

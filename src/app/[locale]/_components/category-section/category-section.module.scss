@@ -1,0 +1,16 @@
+.categorySection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+  padding: 0 5rem;
+
+  .content {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+}
