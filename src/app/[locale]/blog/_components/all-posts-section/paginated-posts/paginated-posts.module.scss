@@ -1,0 +1,17 @@
+.paginatedPosts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .paginationButton {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,25 @@
+.allPostsSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .content {
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    .titleBlock {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid $secondaryText;
+    }
+
+    .postList {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+  }
+}

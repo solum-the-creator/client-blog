@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
                     $stroke: #4c4c4c;
                     $strokeLight: #e8e8e9;
                     $secondary: #ffffff;
-                    $secondaryText: #6d6e76;
+                    $secondaryText: #6d6e7688;
                     $secondaryBackground: #f4f4f4;`,
   },
   images: {
@@ -23,6 +23,21 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'www.gravatar.com',
         pathname: '/avatar/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'loremflickr.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cloudflare-ipfs.com',
+        pathname: '/ipfs/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+        pathname: '/photos/**',
       },
     ],
   },
