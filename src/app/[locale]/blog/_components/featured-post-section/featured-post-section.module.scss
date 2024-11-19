@@ -1,0 +1,12 @@
+.featuredPostSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 2rem;
+  background-color: $purpleLight;
+
+  .container {
+    width: 100%;
+    max-width: 1280px;
+  }
+}
