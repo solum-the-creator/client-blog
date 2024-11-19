@@ -2,6 +2,9 @@ import { Heading, Text } from '@solumzy/ui-lib-client-blog';
 import classNames from 'classnames';
 import Image from 'next/image';
 
+import { paths } from '@/constants/paths';
+import { Link } from '@/i18n/routing';
+
 import { TextLabel } from '../text-label/text-label';
 
 import styles from './standard-post-card.module.scss';
@@ -16,6 +19,7 @@ type StandardPostCardProps = {
 };
 
 export const StandardPostCard: React.FC<StandardPostCardProps> = ({
+  id,
   imageSrc,
   title,
   description,
@@ -24,14 +28,16 @@ export const StandardPostCard: React.FC<StandardPostCardProps> = ({
 }) => {
   return (
     <div className={classNames(styles.standardPostCard, className)}>
-      <div className={styles.imageWrapper}>
+      <Link href={`${paths.blog}/${id}`} className={styles.imageWrapper}>
         <div className={styles.imageContainer}>
           <Image src={imageSrc} alt={title} fill={true} className={styles.image} />
         </div>
-      </div>
+      </Link>
       <div className={styles.content}>
         <TextLabel text={category} colorVariant="secondary" />
-        <Heading level={2}>{title}</Heading>
+        <Link href={`${paths.blog}/${id}`}>
+          <Heading level={2}>{title}</Heading>
+        </Link>
         <Text variant="secondary">{description}</Text>
       </div>
     </div>

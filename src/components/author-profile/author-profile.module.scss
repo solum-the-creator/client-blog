@@ -2,4 +2,24 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  .content {
+    .name {
+      &.primary {
+        color: $primary;
+      }
+
+      &.secondary {
+        color: $secondary;
+      }
+
+      &.accent {
+        color: $accent;
+      }
+
+      &.purple {
+        color: $purple;
+      }
+    }
+  }
 }

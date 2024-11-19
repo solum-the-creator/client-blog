@@ -1,0 +1,73 @@
+.postArticle {
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .post {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    .postHeader {
+      width: 100%;
+      max-width: 768px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .category {
+        width: fit-content;
+      }
+    }
+
+    .postImage {
+      position: relative;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 9 / 4;
+
+      .image {
+        object-fit: cover;
+      }
+    }
+
+    .postContent {
+      width: 100%;
+      max-width: 768px;
+    }
+  }
+}
+
+.list {
+  list-style-type: disc;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.heading {
+  margin: 1rem 0;
+
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+}
+
+.paragraph {
+  margin: 1rem 0;
+
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}

@@ -11,6 +11,7 @@ type CategoryCardProps = {
   image: string;
   link: string;
   mode?: 'vertical' | 'horizontal';
+  variant?: 'default' | 'flat';
   description?: string;
 };
 
@@ -19,14 +20,15 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
   image,
   link,
   description,
+  variant = 'default',
   mode = 'vertical',
 }) => {
   const isVertical = mode === 'vertical';
   const showDescription = isVertical && description;
 
   return (
-    <Link href={link} className={styles.link}>
-      <div className={classnames(styles.categoryCard, styles[mode])}>
+    <Link href={link} className={classnames(styles.link, styles[variant])}>
+      <div className={classnames(styles.categoryCard, styles[mode], styles[variant])}>
         <Image src={image} alt={title} className={styles.image} />
         <div className={styles.content}>
           <Heading className={styles.title} level={3}>

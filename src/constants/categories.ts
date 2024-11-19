@@ -3,8 +3,10 @@ import economyIcon from '@public/icons/economy-icon.svg';
 import startupIcon from '@public/icons/startup-icon.svg';
 import technologyIcon from '@public/icons/technology-icon.svg';
 
-type Category = {
-  title: string;
+import { CategoryName } from '@/types/post';
+
+export type Category = {
+  title: CategoryName;
   link: string;
   image: string;
   description: string;
@@ -12,25 +14,25 @@ type Category = {
 
 export const categoriesList: Category[] = [
   {
-    title: 'Business',
+    title: 'business',
     link: 'business',
     image: businessIcon,
     description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
   },
   {
-    title: 'Startup',
+    title: 'business',
     link: 'startup',
     image: economyIcon,
     description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
   },
   {
-    title: 'Economy',
+    title: 'economy',
     link: 'economy',
     image: startupIcon,
     description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
   },
   {
-    title: 'Technology',
+    title: 'technology',
     link: 'technology',
     image: technologyIcon,
     description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
