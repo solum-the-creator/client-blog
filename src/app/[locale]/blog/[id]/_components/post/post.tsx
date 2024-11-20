@@ -4,15 +4,17 @@ import Image from 'next/image';
 import { AuthorProfile } from '@/components/author-profile/author-profile';
 import { CategoryCard } from '@/components/category-card/category-card';
 import { categoriesList, Category } from '@/constants/categories';
+import { Author } from '@/types/authors';
 import { PostWithContent } from '@/types/post';
 
 import styles from './post.module.scss';
 
 type PostProps = {
+  author: Author;
   post: PostWithContent;
 };
 
-export const Post: React.FC<PostProps> = ({ post }) => {
+export const Post: React.FC<PostProps> = ({ post, author }) => {
   const { title, imageSrc, content, category: postCategory } = post;
 
   const postContent = content.map((item, index) => {
@@ -53,8 +55,8 @@ export const Post: React.FC<PostProps> = ({ post }) => {
       <div className={styles.post}>
         <header className={styles.postHeader}>
           <AuthorProfile
-            imageSrc="https://images.pexels.com/photos/373076/pexels-photo-373076.jpeg"
-            name="John Doe"
+            imageSrc={author.avatar}
+            name={author.name}
             colorVariant="purple"
             date={post.createdAt}
           />

@@ -1,18 +1,27 @@
 import { Heading } from '@solumzy/ui-lib-client-blog';
 
 import { AuthorCard } from '@/components/author-card/author-card';
-import { authors } from '@/constants/authors';
+import { fetchLimitedAuthors } from '@/lib/api/authors';
 
 import styles from './authors-section.module.scss';
 
-export const AuthorsSection = () => {
+export const AuthorsSection = async () => {
+  const authors = await fetchLimitedAuthors(4);
+
   return (
     <section className={styles.authorsSection}>
       <div className={styles.content}>
         <Heading level={2}>List of Authors</Heading>
         <div className={styles.authorList}>
-          {authors.map((author) => (
-            <AuthorCard key={author.name} {...author} />
+          {authors.map(({ id, name, position, avatar, socials }) => (
+            <AuthorCard
+              key={id}
+              id={id}
+              name={name}
+              position={position}
+              imageSrc={avatar}
+              socials={socials}
+            />
           ))}
         </div>
       </div>

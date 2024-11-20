@@ -1,27 +1,41 @@
+import React from 'react';
 import { Button, Heading, Text } from '@solumzy/ui-lib-client-blog';
 
 import { PostByLabel } from '@/components/post-by-label/post-by-label';
+import { paths } from '@/constants/paths';
+import { Link } from '@/i18n/routing';
+import { Author } from '@/types/authors';
+import { Post } from '@/types/post';
+import { shortFormatDate } from '@/utils/date-formatter';
 
 import styles from './post-content.module.scss';
 
-export const PostContent = () => {
+type PostContentProps = {
+  post: Post;
+  author: Author;
+};
+
+export const PostContent: React.FC<PostContentProps> = ({ post, author }) => {
+  const formatedDate = shortFormatDate(post.createdAt);
+
   return (
     <div className={styles.postWrapper}>
       <div className={styles.postCategory}>
-        POSTED ON <span className={styles.category}>STARTUP</span>
+        POSTED ON <span className={styles.category}>{post.category}</span>
       </div>
       <Heading variant="display" colorVariant="light">
-        Step-by-step guide to choosing great font pairs
+        {post.title}
       </Heading>
       <div className={styles.postBody}>
-        <PostByLabel authorName="John Doe" date="May 20, 2023" />
+        <PostByLabel authorName={author.name} date={formatedDate} />
         <Text variant="light" className={styles.description}>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+          {post.description}
         </Text>
       </div>
       <div className={styles.buttonWrapper}>
-        <Button size="large">Read More {'>'}</Button>
+        <Link href={`${paths.blog}/${post.id}`}>
+          <Button size="large">Read More {'>'}</Button>
+        </Link>
       </div>
     </div>
   );

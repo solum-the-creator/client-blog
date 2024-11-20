@@ -9,6 +9,7 @@ import { SocialLinks } from '../social-links/social-links';
 import styles from './author-card.module.scss';
 
 type AuthorCardProps = {
+  id: string;
   name: string;
   position: string;
   imageSrc: string;

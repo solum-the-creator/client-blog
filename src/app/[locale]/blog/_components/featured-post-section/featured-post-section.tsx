@@ -1,19 +1,24 @@
-import postImage from '@public/post-image.jpg';
-
 import { FeaturedPostCard } from '@/components/featured-post-card/featured-post-card';
+import { fetchPostAndAuthorById } from '@/lib/api/posts';
+import { shortFormatDate } from '@/utils/date-formatter';
 
 import styles from './featured-post-section.module.scss';
 
-export const FeaturedPostSection = () => {
+export const FeaturedPostSection = async () => {
+  const { post, author } = await fetchPostAndAuthorById('3');
+
+  const formatedDate = shortFormatDate(post.createdAt);
+
   return (
     <section className={styles.featuredPostSection}>
       <div className={styles.container}>
         <FeaturedPostCard
-          imageSrc={postImage.src}
-          title="Step-by-step guide to choosing great font pairs"
-          description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-          author="John Doe"
-          date="May 20, 2023"
+          id={post.id}
+          imageSrc={post.imageSrc}
+          title={post.title}
+          description={post.description}
+          author={author.name}
+          date={formatedDate}
           imagePosition="side"
           withFeaturedText={true}
         />

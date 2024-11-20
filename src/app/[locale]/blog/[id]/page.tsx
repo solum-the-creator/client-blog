@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
 
 import { JoinOurTeamSection } from '@/components/join-our-team-section/join-our-team-section';
-import { PostWithContent } from '@/types/post';
+import { fetchAuthorById } from '@/lib/api/authors';
+import { fetchPostById } from '@/lib/api/posts';
 
 import { Post } from './_components/post/post';
 import { SimilarPostsSection } from './_components/similar-posts-section/similar-posts-section';
@@ -12,14 +13,6 @@ type PostPageProps = {
   }>;
 };
 
-const fetchPostById = async (id: string): Promise<PostWithContent | null> => {
-  const response = await fetch(`https://673665a2aafa2ef22230699e.mockapi.io/api/v1/posts/${id}`);
-  if (!response.ok) {
-    throw new Error('Failed to fetch post');
-  }
-  return response.json();
-};
-
 export default async function PostPage({ params }: PostPageProps) {
   const { id } = await params;
   const post = await fetchPostById(id);
@@ -28,9 +21,15 @@ export default async function PostPage({ params }: PostPageProps) {
     notFound();
   }
 
+  const author = await fetchAuthorById(post.authorId);
+
+  if (!author) {
+    notFound();
+  }
+
   return (
     <>
-      <Post post={post} />
+      <Post post={post} author={author} />
       <SimilarPostsSection postId={id} category={post.category} />
       <JoinOurTeamSection />
     </>

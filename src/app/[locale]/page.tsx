@@ -10,9 +10,6 @@ import { SpecialSection } from './_components/special-section/special-section';
 import { TestimonialsSection } from './_components/testimonials-section/testimonials-section';
 
 export default async function HomePage() {
-  // const data = await fetch('https://673665a2aafa2ef22230699e.mockapi.io/api/v1/posts');
-  // const posts = (await data.json()) as { id: number; title: string }[];
-
   return (
     <>
       <HeroSection />

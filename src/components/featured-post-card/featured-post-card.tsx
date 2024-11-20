@@ -4,12 +4,16 @@ import { Button, Heading, Text } from '@solumzy/ui-lib-client-blog';
 import classnames from 'classnames';
 import Image from 'next/image';
 
+import { paths } from '@/constants/paths';
+import { Link } from '@/i18n/routing';
+
 import { PostByLabel } from '../post-by-label/post-by-label';
 import { TextLabel } from '../text-label/text-label';
 
 import styles from './featured-post-card.module.scss';
 
 type FeaturedPostCardProps = {
+  id: string;
   imageSrc: string;
   imagePosition?: 'top' | 'side';
   withFeaturedText?: boolean;
@@ -21,6 +25,7 @@ type FeaturedPostCardProps = {
 };
 
 export const FeaturedPostCard: React.FC<FeaturedPostCardProps> = ({
+  id,
   imageSrc,
   imagePosition = 'top',
   withFeaturedText,
@@ -36,25 +41,29 @@ export const FeaturedPostCard: React.FC<FeaturedPostCardProps> = ({
     <div
       className={classnames(styles.featuredPostCard, styles[`image-${imagePosition}`], className)}
     >
-      <div className={styles.imageWrapper}>
+      <Link href={`${paths.blog}/${id}`} className={styles.imageWrapper}>
         <Image src={imageSrc} alt={title} fill={true} className={styles.image} />
-      </div>
+      </Link>
 
       <div className={styles.content}>
         {withFeaturedText && <TextLabel text="Featured Post" colorVariant="primary" />}
         {!isHorizontal && <PostByLabel authorName={author} date={date} colorVariant="secondary" />}
 
-        <Heading
-          level={2}
-          className={classnames(styles.title, { [styles.vertical]: !isHorizontal })}
-        >
-          {title}
-        </Heading>
+        <Link href={`${paths.blog}/${id}`} className={styles.title}>
+          <Heading
+            level={2}
+            className={classnames(styles.title, { [styles.vertical]: !isHorizontal })}
+          >
+            {title}
+          </Heading>
+        </Link>
 
         {isHorizontal && <PostByLabel authorName={author} date={date} colorVariant="secondary" />}
         <Text className={styles.description}>{description}</Text>
         <div className={styles.buttonWrapper}>
-          <Button size="large">Read More {'>'}</Button>
+          <Link href={`${paths.blog}/${id}`}>
+            <Button size="large">Read More {'>'}</Button>
+          </Link>
         </div>
       </div>
     </div>

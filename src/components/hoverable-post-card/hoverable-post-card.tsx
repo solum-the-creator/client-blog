@@ -8,16 +8,23 @@ import { PostByLabel } from '../post-by-label/post-by-label';
 import styles from './hoverable-post-card.module.scss';
 
 type HoverablePostCardProps = {
+  id: string;
+  authorId: string;
   title: string;
-  author: string;
+  authorName: string;
   date: string;
 };
 
-export const HoverablePostCard: React.FC<HoverablePostCardProps> = ({ title, author, date }) => {
+export const HoverablePostCard: React.FC<HoverablePostCardProps> = ({
+  id,
+  title,
+  authorName,
+  date,
+}) => {
   return (
     <div className={styles.hoverablePostCard}>
-      <PostByLabel authorName={author} date={date} colorVariant="secondary" />
-      <Link href={paths.blog}>
+      <PostByLabel authorName={authorName} date={date} colorVariant="secondary" />
+      <Link href={`${paths.blog}/${id}`} className={styles.link}>
         <Heading level={4} className={styles.title}>
           {title}
         </Heading>

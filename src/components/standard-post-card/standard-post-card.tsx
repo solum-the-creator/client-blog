@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import { paths } from '@/constants/paths';
 import { Link } from '@/i18n/routing';
+import { Author } from '@/types/authors';
 
 import { PostByLabel } from '../post-by-label/post-by-label';
 import { TextLabel } from '../text-label/text-label';
@@ -17,7 +18,7 @@ type StandardPostCardProps = {
   description: string;
   category: string;
   createdAt: string;
-  author?: string;
+  author?: Author;
   layout?: 'vertical' | 'horizontal';
   className?: string;
 };
@@ -44,7 +45,9 @@ export const StandardPostCard: React.FC<StandardPostCardProps> = ({
       </Link>
       <div className={styles.content}>
         {!isVertical && <TextLabel text={category} colorVariant="secondary" />}
-        {author && <PostByLabel authorName={author} date={createdAt} colorVariant="secondary" />}
+        {author && (
+          <PostByLabel authorName={author.name} date={createdAt} colorVariant="secondary" />
+        )}
 
         <Link href={`${paths.blog}/${id}`} className={styles.title}>
           <Heading level={2}>{title}</Heading>
