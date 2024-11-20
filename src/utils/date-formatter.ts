@@ -19,5 +19,15 @@ export const formatDate = (dateString: string): string => {
     }
   };
 
-  return `on ${day}${daySuffix(day)} ${month} ${year}`;
+  return `${day}${daySuffix(day)} ${month} ${year}`;
+};
+
+export const shortFormatDate = (dateString: string): string => {
+  const date = new Date(dateString);
+
+  const day = date.getDate();
+  const month = date.toLocaleString('en-US', { month: 'short' });
+  const year = date.getFullYear();
+
+  return `${month} ${day}, ${year}`;
 };

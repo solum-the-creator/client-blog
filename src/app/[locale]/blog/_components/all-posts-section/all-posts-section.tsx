@@ -1,6 +1,6 @@
 import { Heading } from '@solumzy/ui-lib-client-blog';
 
-import { Post } from '@/constants/posts';
+import { Post } from '@/types/post';
 
 import { PaginatedPosts } from './paginated-posts/paginated-posts';
 

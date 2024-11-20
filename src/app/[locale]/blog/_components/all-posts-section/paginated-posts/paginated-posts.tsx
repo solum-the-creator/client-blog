@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Button } from '@solumzy/ui-lib-client-blog';
 
 import { StandardPostCard } from '@/components/standard-post-card/standard-post-card';
-import { Post } from '@/constants/posts';
+import { Post } from '@/types/post';
 
 import styles from './paginated-posts.module.scss';
 

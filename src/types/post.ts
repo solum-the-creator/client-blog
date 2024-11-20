@@ -12,7 +12,9 @@ export type TagName =
   | 'business'
   | 'experience'
   | 'economy'
-  | 'marketing';
+  | 'marketing'
+  | 'innovation'
+  | 'future';
 
 export type Post = {
   id: string;

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { paths } from '@/constants/paths';
 import { Link } from '@/i18n/routing';
 
+import { PostByLabel } from '../post-by-label/post-by-label';
 import { TextLabel } from '../text-label/text-label';
 
 import styles from './standard-post-card.module.scss';
@@ -15,6 +16,9 @@ type StandardPostCardProps = {
   title: string;
   description: string;
   category: string;
+  createdAt: string;
+  author?: string;
+  layout?: 'vertical' | 'horizontal';
   className?: string;
 };
 
@@ -24,18 +28,25 @@ export const StandardPostCard: React.FC<StandardPostCardProps> = ({
   title,
   description,
   category,
+  layout = 'horizontal',
+  createdAt,
+  author,
   className,
 }) => {
+  const isVertical = layout === 'vertical';
+
   return (
-    <div className={classNames(styles.standardPostCard, className)}>
+    <div className={classNames(styles.standardPostCard, styles[layout], className)}>
       <Link href={`${paths.blog}/${id}`} className={styles.imageWrapper}>
         <div className={styles.imageContainer}>
           <Image src={imageSrc} alt={title} fill={true} className={styles.image} />
         </div>
       </Link>
       <div className={styles.content}>
-        <TextLabel text={category} colorVariant="secondary" />
-        <Link href={`${paths.blog}/${id}`}>
+        {!isVertical && <TextLabel text={category} colorVariant="secondary" />}
+        {author && <PostByLabel authorName={author} date={createdAt} colorVariant="secondary" />}
+
+        <Link href={`${paths.blog}/${id}`} className={styles.title}>
           <Heading level={2}>{title}</Heading>
         </Link>
         <Text variant="secondary">{description}</Text>

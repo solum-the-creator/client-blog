@@ -34,7 +34,7 @@ export const AuthorProfile: React.FC<AuthorProfileProps> = ({
           {name}
         </Heading>
         {address && <Text as="span">{address}</Text>}
-        {date && <Text as="span">Posted {formattedDate}</Text>}
+        {date && <Text as="span">Posted on {formattedDate}</Text>}
       </div>
     </div>
   );

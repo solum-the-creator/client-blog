@@ -4,6 +4,7 @@ import { JoinOurTeamSection } from '@/components/join-our-team-section/join-our-
 import { PostWithContent } from '@/types/post';
 
 import { Post } from './_components/post/post';
+import { SimilarPostsSection } from './_components/similar-posts-section/similar-posts-section';
 
 type PostPageProps = {
   params: Promise<{
@@ -30,6 +31,7 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <>
       <Post post={post} />
+      <SimilarPostsSection postId={id} category={post.category} />
       <JoinOurTeamSection />
     </>
   );
