@@ -10,7 +10,7 @@ export const SubscribeBlock = () => {
       </Heading>
       <div className={styles.form}>
         <Input placeholder="Enter your email" type="email" fullWidth={true} />
-        <Button size="large" type="submit">
+        <Button size="large" type="submit" className={styles.button}>
           Subscribe
         </Button>
       </div>

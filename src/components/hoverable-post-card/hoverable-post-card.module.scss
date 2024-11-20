@@ -16,5 +16,9 @@
 
   .title {
     max-width: 23rem;
+
+    @media screen and (max-width: 1024px) {
+      max-width: 100%;
+    }
   }
 }

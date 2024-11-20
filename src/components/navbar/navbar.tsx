@@ -1,12 +1,12 @@
-import { getTranslations } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
 
 import { paths } from '@/constants/paths';
 import { Link } from '@/i18n/routing';
 
 import styles from './navbar.module.scss';
 
-export async function Navbar() {
-  const t = await getTranslations('Navbar');
+export const Navbar: React.FC = () => {
+  const t = useTranslations('Navbar');
 
   return (
     <nav className={styles.navbar}>
@@ -16,4 +16,4 @@ export async function Navbar() {
       <Link href={paths.contact}>{t('contact')}</Link>
     </nav>
   );
-}
+};

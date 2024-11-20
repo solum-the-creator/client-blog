@@ -4,6 +4,10 @@
   flex-direction: column;
   align-items: center;
 
+  @media screen and (max-width: 768px) {
+    padding: 4rem 0;
+  }
+
   .post {
     width: 100%;
     max-width: 1280px;
@@ -12,7 +16,12 @@
     align-items: center;
     gap: 4rem;
 
+    @media screen and (max-width: 768px) {
+      gap: 2rem;
+    }
+
     .postHeader {
+      padding: 0 2rem;
       width: 100%;
       max-width: 768px;
       display: flex;
@@ -38,6 +47,7 @@
     .postContent {
       width: 100%;
       max-width: 768px;
+      padding: 0 2rem;
     }
   }
 }

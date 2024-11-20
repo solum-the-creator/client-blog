@@ -6,5 +6,10 @@
   .featuredPostCardWrapper {
     padding: 2rem;
     border: 1px solid $strokeLight;
+
+    @media screen and (max-width: 512px) {
+      padding: 0;
+      border: none;
+    }
   }
 }

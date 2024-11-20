@@ -12,6 +12,10 @@ body {
   flex-direction: column;
 
   font-weight: 400;
+
+  @media screen and (max-width: 512px) {
+    font-size: 14px;
+  }
 }
 
 a {

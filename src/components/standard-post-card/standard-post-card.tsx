@@ -49,8 +49,10 @@ export const StandardPostCard: React.FC<StandardPostCardProps> = ({
           <PostByLabel authorName={author.name} date={createdAt} colorVariant="secondary" />
         )}
 
-        <Link href={`${paths.blog}/${id}`} className={styles.title}>
-          <Heading level={2}>{title}</Heading>
+        <Link href={`${paths.blog}/${id}`}>
+          <Heading level={2} className={styles.title}>
+            {title}
+          </Heading>
         </Link>
         <Text variant="secondary">{description}</Text>
       </div>

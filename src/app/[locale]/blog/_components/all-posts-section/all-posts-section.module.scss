@@ -1,7 +1,12 @@
 .allPostsSection {
   width: 100%;
   display: flex;
+  padding: 0 5rem;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 2rem;
+  }
 
   .content {
     margin-top: 4rem;
@@ -14,12 +19,6 @@
     .titleBlock {
       padding-bottom: 2rem;
       border-bottom: 1px solid $secondaryText;
-    }
-
-    .postList {
-      display: flex;
-      flex-direction: column;
-      gap: 3.5rem;
     }
   }
 }

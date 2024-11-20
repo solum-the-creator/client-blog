@@ -9,7 +9,7 @@ import { Header } from '@/components/header/header';
 import { Locale, routing } from '@/i18n/routing';
 
 import '@solumzy/ui-lib-client-blog/dist/index.css';
-import '@/app/styles/global.scss';
+import '@/styles/global.scss';
 
 const sen = Sen({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'] });
 
@@ -42,11 +42,11 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   return (
     <html lang={locale}>
       <body className={sen.className}>
-        <Header />
         <NextIntlClientProvider messages={messages}>
+          <Header />
           <main>{children}</main>
+          <Footer />
         </NextIntlClientProvider>
-        <Footer />
       </body>
     </html>
   );

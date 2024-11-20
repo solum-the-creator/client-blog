@@ -1,14 +1,41 @@
 .header {
+  position: relative;
   padding: 0.75rem 2rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $primary;
-}
-
-.right {
-  display: flex;
-  align-items: center;
   gap: 1rem;
+  background-color: $primary;
+
+  .navbar {
+    display: flex;
+    gap: 1rem;
+    color: $secondary;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1rem;
+      transition: color 0.3s;
+
+      &:hover {
+        color: lighten($secondary, 10%);
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .navbar {
+      align-items: center;
+    }
+  }
 }

@@ -4,7 +4,13 @@
 
   &.horizontal {
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
+
+    @media screen and (max-width: 1024px) {
+      gap: 1rem;
+    }
   }
 
   &.vertical {

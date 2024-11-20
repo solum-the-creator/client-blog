@@ -1,6 +1,7 @@
 import { Button } from '@solumzy/ui-lib-client-blog';
 import { getTranslations } from 'next-intl/server';
 
+import { BurgerMenu } from '../burger-menu/burger-menu';
 import { Logo } from '../logo/logo';
 import { Navbar } from '../navbar/navbar';
 
@@ -13,10 +14,14 @@ export const Header: React.FC = async () => {
     <header className={styles.header}>
       <Logo />
       <div className={styles.right}>
-        <Navbar />
-        <Button type="button" variant="secondary">
-          {t('video')}
-        </Button>
+        <div className={styles.navbar}>
+          <Navbar />
+          <Button type="button" variant="secondary" className={styles.videoButton}>
+            {t('video')}
+          </Button>
+        </div>
+
+        <BurgerMenu />
       </div>
     </header>
   );

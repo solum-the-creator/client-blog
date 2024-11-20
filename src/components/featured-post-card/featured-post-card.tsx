@@ -1,5 +1,3 @@
-'use client';
-
 import { Button, Heading, Text } from '@solumzy/ui-lib-client-blog';
 import classnames from 'classnames';
 import Image from 'next/image';
