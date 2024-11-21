@@ -3,8 +3,7 @@ import { notFound } from 'next/navigation';
 import { fetchPostsByCategory } from '@/lib/api/posts';
 import { findCategory } from '@/utils/validation-utils';
 
-import { CategorySidebar } from './_components/category-sidebar/category-sidebar';
-import { PostsSection } from './_components/posts-section/posts-section';
+import { CategorySection } from './_components/category-section/category-section';
 
 import styles from './category-page.module.scss';
 
@@ -27,10 +26,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   return (
     <div className={styles.categoryPage}>
-      <div className={styles.content}>
-        <PostsSection posts={posts} />
-        <CategorySidebar currentCategory={currentCategory.title} />
-      </div>
+      <CategorySection currentCategory={currentCategory.title} posts={posts} />
     </div>
   );
 }
