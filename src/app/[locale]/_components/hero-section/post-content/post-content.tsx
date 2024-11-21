@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Heading, Text } from '@solumzy/ui-lib-client-blog';
+import { getTranslations } from 'next-intl/server';
 
 import { PostByLabel } from '@/components/post-by-label/post-by-label';
 import { paths } from '@/constants/paths';
@@ -15,13 +16,16 @@ type PostContentProps = {
   author: Author;
 };
 
-export const PostContent: React.FC<PostContentProps> = ({ post, author }) => {
+export const PostContent: React.FC<PostContentProps> = async ({ post, author }) => {
   const formatedDate = shortFormatDate(post.createdAt);
+
+  const t = await getTranslations('Common');
+  const tButton = await getTranslations('Buttons');
 
   return (
     <div className={styles.postWrapper}>
       <div className={styles.postCategory}>
-        POSTED ON{' '}
+        <span className={styles.postedText}>{t('postedOn')}</span>{' '}
         <Link href={`${paths.category}/${post.category}`}>
           <span className={styles.category}>{post.category}</span>
         </Link>
@@ -37,7 +41,9 @@ export const PostContent: React.FC<PostContentProps> = ({ post, author }) => {
       </div>
       <div className={styles.buttonWrapper}>
         <Link href={`${paths.blog}/${post.id}`}>
-          <Button size="large">Read More {'>'}</Button>
+          <Button size="large">
+            {tButton('readMore')} {'>'}
+          </Button>
         </Link>
       </div>
     </div>

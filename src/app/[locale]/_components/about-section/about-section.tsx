@@ -1,11 +1,15 @@
 import { Heading, Text } from '@solumzy/ui-lib-client-blog';
+import { useTranslations } from 'next-intl';
 
 import { TextLabel } from '@/components/text-label/text-label';
+import { paths } from '@/constants/paths';
 import { Link } from '@/i18n/routing';
 
 import styles from './about-section.module.scss';
 
 export const AboutSection = () => {
+  const t = useTranslations('HomePage.aboutSection');
+
   return (
     <section className={styles.aboutSection}>
       <div className={styles.content}>
@@ -16,34 +20,23 @@ export const AboutSection = () => {
         </div>
         <div className={styles.contentBlock}>
           <div className={styles.column}>
-            <TextLabel text="About Us" colorVariant="primary" />
+            <TextLabel text={t('labelAbout')} colorVariant="primary" />
             <div className={styles.columnText}>
-              <Heading level={2}>
-                We are a community of content writers who share their learnings
-              </Heading>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
-              </Text>
+              <Heading level={2}>{t('titleAbout')}</Heading>
+              <Text>{t('textAbout')}</Text>
               <div>
-                <Link href={'/about'} className={styles.readMore}>
-                  Read More {'>'}
+                <Link href={paths.about} className={styles.readMore}>
+                  {t('readMore')} {'>'}
                 </Link>
               </div>
             </div>
           </div>
 
           <div className={styles.column}>
-            <TextLabel text="Our mission" colorVariant="primary" />
+            <TextLabel text={t('labelMission')} colorVariant="primary" />
             <div className={styles.columnText}>
-              <Heading level={3}>
-                Creating valuable content for creatives all around the world
-              </Heading>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </Text>
+              <Heading level={3}>{t('titleMission')}</Heading>
+              <Text>{t('textMission')}</Text>
             </div>
           </div>
         </div>

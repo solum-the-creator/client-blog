@@ -1,7 +1,35 @@
 {
   "HomePage": {
-    "title": "Hallo Welt",
-    "subtitle": "das ist der Untertitel"
+    "aboutSection": {
+      "labelAbout": "Über uns",
+      "titleAbout": "Wir sind eine Gemeinschaft von Content-Autoren, die ihre Erkenntnisse teilen",
+      "textAbout": "Bitte beachten Sie, dass dies ein sehr wichtiger, lohnenswerter und schmerzhafter Prozess ist, der sich jedoch nicht als vorübergehende Folge von Wehen und Fettleibigkeit überschneidet.",
+      "labelMission": "Unsere Mission",
+      "titleMission": "Erstellen wertvoller Inhalte für Kreative auf der ganzen Welt",
+      "textMission": "Bitte beachten Sie, dass dies ein sehr wichtiger, lohnenswerter und schmerzhafter Prozess ist, der sich jedoch nicht als vorübergehende Folge von Wehen und Fettleibigkeit überschneidet. Was den kleinsten Ansatz betrifft, kann jedes Training in einem unserer Bären nur dazu dienen, die Ziele zu erreichen. Befolgen Sie daher bitte die Anweisungen.",
+      "readMore": "Mehr lesen"
+    },
+    "categorySection": {
+      "title": "Wählen Sie eine Kategorie"
+    },
+    "specialSection": {
+      "label": "Warum wir angefangen haben",
+      "title": "Es begann als einfache Idee und entwickelte sich zu unserer Leidenschaft",
+      "text": "Bitte beachten Sie, dass dies ein sehr wichtiger, lohnenswerter und schmerzhafter Prozess ist, der sich jedoch nicht als vorübergehende Folge von Wehen und Fettleibigkeit überschneidet. Was die Mindestentschuldigungen betrifft, kann jede routinemäßige Nostradamus-Beschäftigung nur Ziele haben.",
+      "buttonText": "Unsere Geschichte >"
+    },
+    "authorsSection": {
+      "title": "Liste der Autoren"
+    },
+    "featuredLogoSection": {
+      "label": "Wir sind",
+      "title": "Vorgestellt in"
+    },
+    "testimonialsSection": {
+      "label": "Kundenmeinungen",
+      "title": "Was die Leute über unseren Blog sagen",
+      "text": "Vielen Dank für Ihre Hilfe, ich bin so froh, dass es Ihnen gefallen hat, aber ich bin so froh, dass es Ihnen gefallen hat."
+    }
   },
   "Navbar": {
     "home": "Heim",
@@ -11,9 +39,31 @@
     "privacy": "Datenschutz"
   },
   "Buttons": {
-    "video": "Video über uns"
+    "video": "Video über uns",
+    "readMore": "Mehr lesen"
   },
   "Logo": {
     "title": "Modsen Kunden Blog"
+  },
+  "Common": {
+    "postedOn": "Veröffentlicht am",
+    "by": "Von"
+  },
+  "Post": {
+    "featured": "Vorgestellter Beitrag",
+    "allPosts": "Alle Beiträge",
+    "viewAll": "Alle anzeigen"
+  },
+  "JoinOurTeamSection": {
+    "title": "Werden Sie Teil unseres Teams und werden Sie Teil unserer Geschichte",
+    "text": "Lorem ipsum tut mir leid, aber es ist wichtig, dass Sie zeitweilig etwas tun.",
+    "buttonText": "Jetzt beitreten"
+  },
+  "Footer": {
+    "subscribeBlock": {
+      "title": "Abonnieren Sie unseren Newsletter, um die neuesten Updates und Neuigkeiten zu erhalten",
+      "inputPlaceholder": "Ihre E-Mail-Adresse",
+      "buttonText": "Abonnieren"
+    }
   }
 }

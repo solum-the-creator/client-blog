@@ -1,22 +1,22 @@
 import { Button, Heading, Text } from '@solumzy/ui-lib-client-blog';
+import { useTranslations } from 'next-intl';
 
 import styles from './join-our-team-section.module.scss';
 
 export const JoinOurTeamSection = () => {
+  const t = useTranslations('JoinOurTeamSection');
+
   return (
     <section className={styles.joinOurTeamSection}>
       <div className={styles.content}>
         <div className={styles.textBlock}>
           <Heading level={2} className={styles.title}>
-            Join our team to be a part of our story
+            {t('title')}
           </Heading>
-          <Text variant="secondary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt.
-          </Text>
+          <Text variant="secondary">{t('text')}</Text>
         </div>
         <div>
-          <Button size="large">Join Now</Button>
+          <Button size="large">{t('buttonText')}</Button>
         </div>
       </div>
     </section>

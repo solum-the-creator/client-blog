@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { Link } from '@/i18n/routing';
 import { LabelColorVariant } from '@/types/colors';
@@ -17,11 +18,14 @@ export const PostByLabel: React.FC<PostByLabelProps> = ({
   date,
   colorVariant = 'accent',
 }) => {
-  const formattedDate = shortFormatDate(date);
+  const locale = useLocale();
+
+  const t = useTranslations('Common');
+  const formattedDate = shortFormatDate(date, locale);
 
   return (
     <div className={styles.postByLabel}>
-      By{' '}
+      {t('by')}{' '}
       <span className={classnames(styles.authorName, styles[colorVariant])}>
         <Link href={'/'}>{authorName}</Link>
       </span>{' '}

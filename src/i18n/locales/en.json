@@ -1,7 +1,35 @@
 {
   "HomePage": {
-    "title": "Hello world",
-    "subtitle": "This is a subtitle"
+    "aboutSection": {
+      "labelAbout": "About Us",
+      "titleAbout": "We are a community of content writers who share their learnings",
+      "textAbout": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "labelMission": "Our Mission",
+      "titleMission": "Creating valuable content for creatives all around the world",
+      "textMission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "readMore": "Read more"
+    },
+    "categorySection": {
+      "title": "Choose A Category"
+    },
+    "specialSection": {
+      "label": "Why we started",
+      "title": "It started out as a simple idea and evolved into our passion",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+      "buttonText": "Discover our story >"
+    },
+    "authorsSection": {
+      "title": "List of Authors"
+    },
+    "featuredLogoSection": {
+      "label": "We are",
+      "title": "Featured In"
+    },
+    "testimonialsSection": {
+      "label": "Testimonials",
+      "title": "What people say about our blog",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+    }
   },
   "Navbar": {
     "home": "Home",
@@ -11,9 +39,31 @@
     "privacy": "Privacy Policy"
   },
   "Buttons": {
-    "video": "Video about us"
+    "video": "Video about us",
+    "readMore": "Read more"
   },
   "Logo": {
     "title": "Modsen Client Blog"
+  },
+  "Common": {
+    "postedOn": "Posted on",
+    "by": "By"
+  },
+  "Post": {
+    "featured": "Featured Post",
+    "allPosts": "All Posts",
+    "viewAll": "View All"
+  },
+  "JoinOurTeamSection": {
+    "title": "Join our team to be a part of our story",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "buttonText": "Join now"
+  },
+  "Footer": {
+    "subscribeBlock": {
+      "title": "Subscribe to our news letter to get latest updates and news",
+      "inputPlaceholder": "Enter your email",
+      "buttonText": "Subscribe"
+    }
   }
 }

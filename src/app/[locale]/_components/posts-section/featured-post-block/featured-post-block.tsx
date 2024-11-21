@@ -1,4 +1,5 @@
 import { Heading } from '@solumzy/ui-lib-client-blog';
+import { getTranslations } from 'next-intl/server';
 
 import { FeaturedPostCard } from '@/components/featured-post-card/featured-post-card';
 import { fetchPostAndAuthorById } from '@/lib/api/posts';
@@ -8,12 +9,13 @@ import styles from './featured-post-block.module.scss';
 
 export const FeaturedPostBlock = async () => {
   const { post, author } = await fetchPostAndAuthorById('3');
+  const t = await getTranslations('Post');
 
   const formatedDate = shortFormatDate(post.createdAt);
 
   return (
     <div className={styles.featuredPostBlock}>
-      <Heading level={2}>Featured Post</Heading>
+      <Heading level={2}>{t('featured')}</Heading>
       <div className={styles.featuredPostCardWrapper}>
         <FeaturedPostCard
           id={post.id}

@@ -5,19 +5,22 @@ import logoIcon4 from '@public/icons/logo4-icon.svg';
 import logoIcon5 from '@public/icons/logo5-icon.svg';
 import { Heading, Text } from '@solumzy/ui-lib-client-blog';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import styles from './featured-logo-section.module.scss';
 
 export const FeaturedLogoSection = () => {
+  const t = useTranslations('HomePage.featuredLogoSection');
+
   return (
     <section className={styles.featuredLogoSection}>
       <div className={styles.content}>
         <div className={styles.featuredBlock}>
           <Text as="span" size="small" variant="secondary">
-            We are
+            {t('label')}
           </Text>
           <Heading level={4} className={styles.title}>
-            Featured In
+            {t('title')}
           </Heading>
         </div>
         <Image src={logoIcon1} alt="Logo 1" className={styles.logo} />

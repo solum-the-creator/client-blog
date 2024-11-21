@@ -1,8 +1,10 @@
-export const formatDate = (dateString: string): string => {
+export const formatDate = (dateString: string, locale = 'en'): string => {
   const date = new Date(dateString);
 
+  const currentLocale = locale === 'en' ? 'en-US' : 'de-DE';
+
   const day = date.getDate();
-  const month = date.toLocaleString('en-US', { month: 'long' });
+  const month = date.toLocaleString(currentLocale, { month: 'long' });
   const year = date.getFullYear();
 
   const daySuffix = (day: number): string => {
@@ -22,11 +24,13 @@ export const formatDate = (dateString: string): string => {
   return `${day}${daySuffix(day)} ${month} ${year}`;
 };
 
-export const shortFormatDate = (dateString: string): string => {
+export const shortFormatDate = (dateString: string, locale = 'en'): string => {
   const date = new Date(dateString);
 
+  const currentLocale = locale === 'en' ? 'en-US' : 'de-DE';
+
   const day = date.getDate();
-  const month = date.toLocaleString('en-US', { month: 'short' });
+  const month = date.toLocaleString(currentLocale, { month: 'short' });
   const year = date.getFullYear();
 
   return `${month} ${day}, ${year}`;

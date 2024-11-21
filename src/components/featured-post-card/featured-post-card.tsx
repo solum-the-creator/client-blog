@@ -1,6 +1,7 @@
 import { Button, Heading, Text } from '@solumzy/ui-lib-client-blog';
 import classnames from 'classnames';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { paths } from '@/constants/paths';
 import { Link } from '@/i18n/routing';
@@ -33,6 +34,7 @@ export const FeaturedPostCard: React.FC<FeaturedPostCardProps> = ({
   description,
   className,
 }) => {
+  const t = useTranslations();
   const isHorizontal = imagePosition === 'side';
 
   return (
@@ -44,7 +46,7 @@ export const FeaturedPostCard: React.FC<FeaturedPostCardProps> = ({
       </Link>
 
       <div className={styles.content}>
-        {withFeaturedText && <TextLabel text="Featured Post" colorVariant="primary" />}
+        {withFeaturedText && <TextLabel text={t('Post.featured')} colorVariant="primary" />}
         {!isHorizontal && <PostByLabel authorName={author} date={date} colorVariant="secondary" />}
 
         <Link href={`${paths.blog}/${id}`} className={styles.title}>
@@ -60,7 +62,9 @@ export const FeaturedPostCard: React.FC<FeaturedPostCardProps> = ({
         <Text className={styles.description}>{description}</Text>
         <div className={styles.buttonWrapper}>
           <Link href={`${paths.blog}/${id}`}>
-            <Button size="large">Read More {'>'}</Button>
+            <Button size="large">
+              {t('Buttons.readMore')} {'>'}
+            </Button>
           </Link>
         </div>
       </div>
