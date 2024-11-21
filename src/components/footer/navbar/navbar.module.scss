@@ -13,4 +13,10 @@
       color: $secondary;
     }
   }
+
+  .link {
+    &.active {
+      color: $accent;
+    }
+  }
 }

@@ -1,19 +1,38 @@
+'use client';
+
+import classNames from 'classnames';
 import { useTranslations } from 'next-intl';
 
 import { paths } from '@/constants/paths';
-import { Link } from '@/i18n/routing';
+import { Link, usePathname } from '@/i18n/routing';
 
 import styles from './navbar.module.scss';
 
 export const Navbar: React.FC = () => {
   const t = useTranslations('Navbar');
+  const links = [
+    { link: paths.home, label: t('home') },
+    { link: paths.blog, label: t('blog') },
+    { link: paths.about, label: t('about') },
+    { link: paths.contact, label: t('contact') },
+  ];
+
+  const pathname = usePathname();
 
   return (
     <nav className={styles.navbar}>
-      <Link href={paths.home}>{t('home')}</Link>
-      <Link href={paths.blog}>{t('blog')}</Link>
-      <Link href={paths.about}>{t('about')}</Link>
-      <Link href={paths.contact}>{t('contact')}</Link>
+      <ul className={styles.list}>
+        {links.map(({ link, label }) => (
+          <li key={link} className={styles.item}>
+            <Link
+              href={link}
+              className={classNames(styles.link, { [styles.active]: pathname === link })}
+            >
+              {label}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 };
