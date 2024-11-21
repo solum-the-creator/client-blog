@@ -44,7 +44,11 @@ export const StandardPostCard: React.FC<StandardPostCardProps> = ({
         </div>
       </Link>
       <div className={styles.content}>
-        {!isVertical && <TextLabel text={category} colorVariant="secondary" />}
+        {!isVertical && (
+          <Link href={`${paths.category}/${category}`}>
+            <TextLabel text={category} colorVariant="secondary" />
+          </Link>
+        )}
         {author && (
           <PostByLabel authorName={author.name} date={createdAt} colorVariant="secondary" />
         )}

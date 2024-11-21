@@ -57,4 +57,11 @@
   &:hover {
     text-decoration: none;
   }
+
+  &.active {
+    .categoryCard {
+      background-color: $accent;
+      border-color: $accent;
+    }
+  }
 }

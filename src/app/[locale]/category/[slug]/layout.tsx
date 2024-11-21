@@ -21,7 +21,6 @@ export default async function CategoryLayout({ children, params }: CategoryLayou
   return (
     <section>
       <CategoryHeader categoryName={categoryData.title} description={categoryData.description} />
-      <h1>Category Layout</h1>
       {children}
     </section>
   );

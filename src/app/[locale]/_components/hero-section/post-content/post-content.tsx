@@ -21,7 +21,10 @@ export const PostContent: React.FC<PostContentProps> = ({ post, author }) => {
   return (
     <div className={styles.postWrapper}>
       <div className={styles.postCategory}>
-        POSTED ON <span className={styles.category}>{post.category}</span>
+        POSTED ON{' '}
+        <Link href={`${paths.category}/${post.category}`}>
+          <span className={styles.category}>{post.category}</span>
+        </Link>
       </div>
       <Heading variant="display" colorVariant="light">
         {post.title}

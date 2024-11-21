@@ -3,8 +3,9 @@ import Image from 'next/image';
 
 import { AuthorProfile } from '@/components/author-profile/author-profile';
 import { CategoryCard } from '@/components/category-card/category-card';
-import { categoriesList, Category } from '@/constants/categories';
+import { categoriesList } from '@/constants/categories';
 import { Author } from '@/types/authors';
+import { Category } from '@/types/category';
 import { PostWithContent } from '@/types/post';
 
 import styles from './post.module.scss';

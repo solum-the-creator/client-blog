@@ -1,4 +1,5 @@
 import { Author } from '@/types/authors';
+import { CategoryName } from '@/types/category';
 import { Post, PostWithContent } from '@/types/post';
 
 const BASE_URL = 'https://673665a2aafa2ef22230699e.mockapi.io/api/v1';
@@ -42,6 +43,16 @@ export const fetchAllPosts = async (): Promise<Post[]> => {
   if (!response.ok) {
     throw new Error('Failed to fetch posts');
   }
+  return response.json();
+};
+
+export const fetchPostsByCategory = async (category: CategoryName): Promise<Post[]> => {
+  const response = await fetch(`${BASE_URL}/posts?category=${category}`);
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch posts');
+  }
+
   return response.json();
 };
 

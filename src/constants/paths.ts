@@ -4,4 +4,5 @@ export const paths = {
   about: '/about',
   contact: '/contact',
   privacy: '/privacy',
+  category: '/category',
 };
