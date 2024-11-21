@@ -1,9 +1,9 @@
+import { CategoryName } from './category';
+
 export type PostContent =
   | { type: 'heading'; text: string }
   | { type: 'paragraph'; text: string }
   | { type: 'list'; items: string[] };
-
-export type CategoryName = 'technology' | 'business' | 'economy' | 'startup';
 
 export type TagName =
   | 'technology'

@@ -3,38 +3,35 @@ import economyIcon from '@public/icons/economy-icon.svg';
 import startupIcon from '@public/icons/startup-icon.svg';
 import technologyIcon from '@public/icons/technology-icon.svg';
 
-import { CategoryName } from '@/types/post';
-
-export type Category = {
-  title: CategoryName;
-  link: string;
-  image: string;
-  description: string;
-};
+import { Category } from '@/types/category';
 
 export const categoriesList: Category[] = [
   {
     title: 'business',
     link: 'business',
     image: businessIcon,
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
   },
   {
-    title: 'business',
+    title: 'startup',
     link: 'startup',
-    image: economyIcon,
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+    image: startupIcon,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
   },
   {
     title: 'economy',
     link: 'economy',
-    image: startupIcon,
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+    image: economyIcon,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
   },
   {
     title: 'technology',
     link: 'technology',
     image: technologyIcon,
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
   },
 ];
