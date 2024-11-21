@@ -1,5 +1,6 @@
 import { memo } from 'react';
 
+import { TagSearch } from '@/components/tag-search/tag-search';
 import { CategoryName } from '@/types/category';
 import { TagName } from '@/types/post';
 
@@ -19,6 +20,7 @@ export const CategorySidebar: React.FC<CategorySidebarProps> = memo(
   ({ currentCategory, selectedTags, onTagToggle }) => {
     return (
       <aside className={styles.categorySidebar}>
+        <TagSearch selectedTags={selectedTags} onTagSelect={onTagToggle} />
         <CategoriesSection currentCategory={currentCategory} />
         <TagsSection selectedTags={selectedTags} onTagToggle={onTagToggle} />
       </aside>
