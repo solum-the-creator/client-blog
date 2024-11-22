@@ -1,0 +1,56 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 13;
+}
+
+.modal {
+  position: relative;
+  width: 90%;
+  max-width: 50rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.content {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 5;
+
+  pointer-events: auto;
+}
+
+.closeButton {
+  font-size: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $accent;
+  }
+}

@@ -1,14 +1,17 @@
 import { Button } from '@solumzy/ui-lib-client-blog';
-import { getTranslations } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
+
+import { Link } from '@/i18n/routing';
 
 import { BurgerMenu } from '../burger-menu/burger-menu';
 import { Logo } from '../logo/logo';
+import { ModalVideo } from '../modal-video/modal-video';
 import { Navbar } from '../navbar/navbar';
 
 import styles from './header.module.scss';
 
-export const Header: React.FC = async () => {
-  const t = await getTranslations('Buttons');
+export const Header: React.FC = () => {
+  const t = useTranslations('Buttons');
 
   return (
     <header className={styles.header}>
@@ -16,9 +19,12 @@ export const Header: React.FC = async () => {
       <div className={styles.right}>
         <div className={styles.navbar}>
           <Navbar />
-          <Button type="button" variant="secondary" className={styles.videoButton}>
-            {t('video')}
-          </Button>
+          <Link href={'?showModal=true'}>
+            <Button type="button" variant="secondary" className={styles.videoButton}>
+              {t('video')}
+            </Button>
+          </Link>
+          <ModalVideo videoUrl="https://www.youtube.com/embed/zRp4NS_eeGc" />
         </div>
 
         <BurgerMenu />
