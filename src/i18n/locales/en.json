@@ -31,6 +31,20 @@
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
     }
   },
+  "BlogPage": {
+    "allPosts": "All Posts",
+    "allCategories": "All Categories",
+    "prev": "Prev",
+    "next": "Next"
+  },
+  "BlogPostPage": {
+    "readNext": "What to read next"
+  },
+  "CategoryPage": {
+    "searchPlaceholder": "Search for tag...",
+    "categories": "Categories",
+    "tags": "Tags"
+  },
   "Navbar": {
     "home": "Home",
     "blog": "Blog",

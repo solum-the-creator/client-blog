@@ -1,5 +1,6 @@
 import { Heading, Text } from '@solumzy/ui-lib-client-blog';
 import classNames from 'classnames';
+import { useTranslations } from 'next-intl';
 
 import { formatDate } from '@/utils/date-formatter';
 
@@ -22,6 +23,7 @@ export const AuthorProfile: React.FC<AuthorProfileProps> = ({
   date,
   colorVariant = 'primary',
 }) => {
+  const t = useTranslations('Common');
   const formattedDate = date && formatDate(date);
 
   return (
@@ -34,7 +36,11 @@ export const AuthorProfile: React.FC<AuthorProfileProps> = ({
           {name}
         </Heading>
         {address && <Text as="span">{address}</Text>}
-        {date && <Text as="span">Posted on {formattedDate}</Text>}
+        {date && (
+          <Text as="span">
+            {t('postedOn')} {formattedDate}
+          </Text>
+        )}
       </div>
     </div>
   );

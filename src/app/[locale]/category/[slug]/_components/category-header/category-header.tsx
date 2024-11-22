@@ -1,4 +1,5 @@
 import { Breadcrumbs, Heading, Text } from '@solumzy/ui-lib-client-blog';
+import { useTranslations } from 'next-intl';
 
 import { paths } from '@/constants/paths';
 import { Link } from '@/i18n/routing';
@@ -12,6 +13,8 @@ type CategoryHeaderProps = {
 };
 
 export const CategoryHeader: React.FC<CategoryHeaderProps> = ({ categoryName, description }) => {
+  const t = useTranslations('Navbar');
+
   return (
     <section className={styles.categoryHeader}>
       <div className={styles.content}>
@@ -27,10 +30,10 @@ export const CategoryHeader: React.FC<CategoryHeaderProps> = ({ categoryName, de
           className={styles.breadcrumbs}
           items={[
             <Link key="home" href={paths.home}>
-              HOME
+              {t('home')}
             </Link>,
             <Link key="blog" href={paths.blog}>
-              BLOG
+              {t('blog')}
             </Link>,
             categoryName,
           ]}

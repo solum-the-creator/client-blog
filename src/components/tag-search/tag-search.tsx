@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Input } from '@solumzy/ui-lib-client-blog';
+import { useTranslations } from 'next-intl';
 
 import { TagName } from '@/types/post';
 import { getTagsByQuery } from '@/utils/filter-utils';
@@ -16,6 +17,7 @@ type TagSearchProps = {
 export const TagSearch: React.FC<TagSearchProps> = ({ selectedTags, onTagSelect }) => {
   const [query, setQuery] = useState('');
   const [searchResults, setSearchResults] = useState<TagName[]>([]);
+  const t = useTranslations('CategoryPage');
 
   const handleSearch = (searchTerm: string) => {
     setQuery(searchTerm);
@@ -47,7 +49,7 @@ export const TagSearch: React.FC<TagSearchProps> = ({ selectedTags, onTagSelect 
         onChange={handleChange}
         fullWidth={true}
         sizeVariant="medium"
-        placeholder="Search for tag..."
+        placeholder={t('searchPlaceholder')}
         className={styles.searchInput}
       />
       {searchResults.length > 0 && (

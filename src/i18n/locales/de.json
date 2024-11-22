@@ -31,6 +31,20 @@
       "text": "Vielen Dank für Ihre Hilfe, ich bin so froh, dass es Ihnen gefallen hat, aber ich bin so froh, dass es Ihnen gefallen hat."
     }
   },
+  "BlogPage": {
+    "allPosts": "Alle Beiträge",
+    "allCategories": "Alle Kategorien",
+    "prev": "Vorherige",
+    "next": "Nächsten"
+  },
+  "BlogPostPage": {
+    "readNext": "Was als nächstes zu lesen ist"
+  },
+  "CategoryPage": {
+    "searchPlaceholder": "Suche nach Tag...",
+    "categories": "Kategorien",
+    "tags": "Tags"
+  },
   "Navbar": {
     "home": "Heim",
     "blog": "Blog",

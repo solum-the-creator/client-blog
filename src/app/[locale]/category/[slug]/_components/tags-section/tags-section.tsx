@@ -1,4 +1,5 @@
 import { Heading } from '@solumzy/ui-lib-client-blog';
+import { useTranslations } from 'next-intl';
 
 import { TagButton } from '@/components/tag-button/tag-button';
 import { tagList } from '@/constants/tags';
@@ -12,13 +13,15 @@ type TagsSectionProps = {
 };
 
 export const TagsSection: React.FC<TagsSectionProps> = ({ selectedTags, onTagToggle }) => {
+  const t = useTranslations('CategoryPage');
+
   const handleTagClick = (tag: TagName) => () => {
     onTagToggle(tag);
   };
 
   return (
     <section className={styles.tagsSection}>
-      <Heading level={2}>Tags</Heading>
+      <Heading level={2}>{t('tags')}</Heading>
       <div className={styles.tags}>
         {tagList.map((tag) => (
           <div key={tag} className={styles.tag}>

@@ -1,4 +1,5 @@
 import { Heading } from '@solumzy/ui-lib-client-blog';
+import { getTranslations } from 'next-intl/server';
 
 import { StandardPostCard } from '@/components/standard-post-card/standard-post-card';
 import { fetchSimilarPostsWithAuthors } from '@/lib/api/posts';
@@ -15,11 +16,12 @@ export const SimilarPostsSection: React.FC<SimilarPostsSectionProps> = async ({
   category,
 }) => {
   const posts = await fetchSimilarPostsWithAuthors(category, postId);
+  const t = await getTranslations('BlogPostPage');
 
   return (
     <section className={styles.similarPostsSection}>
       <div className={styles.content}>
-        <Heading level={2}>What to read next</Heading>
+        <Heading level={2}>{t('readNext')}</Heading>
         <div className={styles.similarPosts}>
           {posts.map(({ id, author, category, description, imageSrc, title, createdAt }) => (
             <StandardPostCard

@@ -1,4 +1,5 @@
 import { Heading } from '@solumzy/ui-lib-client-blog';
+import { useTranslations } from 'next-intl';
 
 import { CategoryList } from '@/components/category-list/category-list';
 import { CategoryName } from '@/types/category';
@@ -10,9 +11,11 @@ type CategoriesSectionProps = {
 };
 
 export const CategoriesSection: React.FC<CategoriesSectionProps> = ({ currentCategory }) => {
+  const t = useTranslations('CategoryPage');
+
   return (
     <section className={styles.categoriesSection}>
-      <Heading level={2}>Categories</Heading>
+      <Heading level={2}>{t('categories')}</Heading>
       <CategoryList mode="vertical" cardMode="horizontal" currentCategory={currentCategory} />
     </section>
   );

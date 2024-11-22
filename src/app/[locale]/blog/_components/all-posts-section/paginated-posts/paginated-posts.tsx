@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Button } from '@solumzy/ui-lib-client-blog';
+import { useTranslations } from 'next-intl';
 
 import { StandardPostCard } from '@/components/standard-post-card/standard-post-card';
 import { Post } from '@/types/post';
@@ -13,14 +14,19 @@ type PaginatedPostsProps = {
 };
 
 export const PaginatedPosts: React.FC<PaginatedPostsProps> = ({ posts }) => {
+  const t = useTranslations('BlogPage');
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 5;
 
   const totalPages = Math.ceil(posts.length / postsPerPage);
   const currentPosts = posts.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage);
 
-  const nextPage = () => setCurrentPage((prev) => Math.min(prev + 1, totalPages));
-  const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
+  const nextPage = () => {
+    setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+  };
+  const prevPage = () => {
+    setCurrentPage((prev) => Math.max(prev - 1, 1));
+  };
 
   return (
     <div className={styles.paginatedPosts}>
@@ -37,7 +43,7 @@ export const PaginatedPosts: React.FC<PaginatedPostsProps> = ({ posts }) => {
           disabled={currentPage === 1}
           className={styles.paginationButton}
         >
-          {'<'} Prev
+          {'<'} {t('prev')}
         </Button>
         <Button
           onClick={nextPage}
@@ -46,7 +52,7 @@ export const PaginatedPosts: React.FC<PaginatedPostsProps> = ({ posts }) => {
           disabled={currentPage === totalPages}
           className={styles.paginationButton}
         >
-          Next {'>'}
+          {t('next')} {'>'}
         </Button>
       </div>
     </div>
