@@ -2,6 +2,7 @@ import { Text } from '@solumzy/ui-lib-client-blog';
 
 import { Social } from '@/types/social';
 
+import { LocaleSwitcher } from '../locale-switcher/locale-switcher';
 import { Logo } from '../logo/logo';
 import { SocialLinks } from '../social-links/social-links';
 
@@ -31,6 +32,7 @@ export const Footer = () => {
             <Text variant="secondary">Finstreet 118 2561 Fintown</Text>
             <Text variant="secondary">Hello@finsweet.com 020 7993 2905</Text>
           </div>
+          <LocaleSwitcher />
           <SocialLinks socials={socials} layout="horizontal" color="secondary" />
         </div>
       </div>
