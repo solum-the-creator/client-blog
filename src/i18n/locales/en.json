@@ -49,6 +49,28 @@
     "welcomeText": "Hey there, I'm {name} and welcome to my Blog",
     "myPosts": "My Posts"
   },
+  "ContactPage": {
+    "heading": {
+      "label": "Contact us",
+      "title": "Let's Start a Conversation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim."
+    },
+    "contactInfo": {
+      "workingHours": "Working Hours",
+      "mondayToFriday": "Monday to Friday",
+      "mondayToFridayTime": "9:00 AM to 8:00 PM",
+      "supportTime": "Our Support Team is available 24/7",
+      "contactUs": "Contact Us"
+    },
+    "contactForm": {
+      "name": "Full Name",
+      "email": "Your Email",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Message Sent Successfully",
+      "error": "Failed to send message"
+    }
+  },
   "Navbar": {
     "home": "Home",
     "blog": "Blog",
@@ -81,7 +103,8 @@
     "subscribeBlock": {
       "title": "Subscribe to our news letter to get latest updates and news",
       "inputPlaceholder": "Enter your email",
-      "buttonText": "Subscribe"
+      "buttonText": "Subscribe",
+      "errorText": "Failed to subscribe"
     }
   }
 }

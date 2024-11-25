@@ -49,6 +49,28 @@
     "welcomeText": "Hallo, ich bin {name} und willkommen auf meinem Blog",
     "myPosts": "Meine Beiträge"
   },
+  "ContactPage": {
+    "heading": {
+      "label": "Kontaktieren Sie uns",
+      "title": "Lass uns ein Gespräch beginnen",
+      "description": "Lorem ipsum ist ein Schmerz, der sich auf die Elite auswirkt, aber vorübergehend auftritt, wenn Arbeit und Schmerz groß sind. Ut enim ad minim."
+    },
+    "contactInfo": {
+      "workingHours": "Arbeitszeit",
+      "mondayToFriday": "Montag bis Freitag",
+      "mondayToFridayTime": "9:00 bis 8:00 Uhr",
+      "supportTime": "Unser Support-Team ist 24/7 verfügbar",
+      "contactUs": "Kontaktieren Sie uns"
+    },
+    "contactForm": {
+      "name": "Vollständiger Name",
+      "email": "Ihre E-Mail-Adresse",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "success": "Nachricht erfolgreich gesendet",
+      "error": "Nachricht konnte nicht gesendet werden"
+    }
+  },
   "Navbar": {
     "home": "Heim",
     "blog": "Blog",
@@ -81,7 +103,8 @@
     "subscribeBlock": {
       "title": "Abonnieren Sie unseren Newsletter, um die neuesten Updates und Neuigkeiten zu erhalten",
       "inputPlaceholder": "Ihre E-Mail-Adresse",
-      "buttonText": "Abonnieren"
+      "buttonText": "Abonnieren",
+      "errorText": "Anmeldung fehlgeschlagen"
     }
   }
 }

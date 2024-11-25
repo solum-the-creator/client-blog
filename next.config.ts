@@ -8,6 +8,8 @@ const nextConfig: NextConfig = {
     silenceDeprecations: ['legacy-js-api'],
     additionalData: `$primary: #232536;
                     $accent: #ffd050;
+                    $success: #4BB543;
+                    $error: #e74c3c;
                     $accentHover: #fbf6ea;
                     $purple: #592ea9;
                     $purpleLight: #f4f0f8;

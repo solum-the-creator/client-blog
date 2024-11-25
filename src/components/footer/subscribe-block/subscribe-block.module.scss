@@ -25,6 +25,14 @@
       flex-direction: column;
     }
 
+    .input {
+      color: $secondary;
+
+      &:focus {
+        border: 1px solid $accent;
+      }
+    }
+
     .button {
       @media screen and (max-width: 568px) {
         width: 100%;
