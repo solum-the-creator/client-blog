@@ -1,6 +1,9 @@
 import { Button, Heading, Text } from '@solumzy/ui-lib-client-blog';
 import { useTranslations } from 'next-intl';
 
+import { paths } from '@/constants/paths';
+import { Link } from '@/i18n/routing';
+
 import styles from './join-our-team-section.module.scss';
 
 export const JoinOurTeamSection = () => {
@@ -16,7 +19,9 @@ export const JoinOurTeamSection = () => {
           <Text variant="secondary">{t('text')}</Text>
         </div>
         <div>
-          <Button size="large">{t('buttonText')}</Button>
+          <Link href={paths.contact} className={styles.readMore}>
+            <Button size="large">{t('buttonText')}</Button>
+          </Link>
         </div>
       </div>
     </section>
