@@ -18,6 +18,7 @@ type FeaturedPostCardProps = {
   withFeaturedText?: boolean;
   title: string;
   author: string;
+  authorId: string;
   date: string;
   description: string;
   className?: string;
@@ -30,6 +31,7 @@ export const FeaturedPostCard: React.FC<FeaturedPostCardProps> = ({
   withFeaturedText,
   title,
   author,
+  authorId,
   date,
   description,
   className,
@@ -47,7 +49,14 @@ export const FeaturedPostCard: React.FC<FeaturedPostCardProps> = ({
 
       <div className={styles.content}>
         {withFeaturedText && <TextLabel text={t('Post.featured')} colorVariant="primary" />}
-        {!isHorizontal && <PostByLabel authorName={author} date={date} colorVariant="secondary" />}
+        {!isHorizontal && (
+          <PostByLabel
+            authorName={author}
+            authorId={authorId}
+            date={date}
+            colorVariant="secondary"
+          />
+        )}
 
         <Link href={`${paths.blog}/${id}`} className={styles.title}>
           <Heading
@@ -58,7 +67,14 @@ export const FeaturedPostCard: React.FC<FeaturedPostCardProps> = ({
           </Heading>
         </Link>
 
-        {isHorizontal && <PostByLabel authorName={author} date={date} colorVariant="secondary" />}
+        {isHorizontal && (
+          <PostByLabel
+            authorName={author}
+            authorId={authorId}
+            date={date}
+            colorVariant="secondary"
+          />
+        )}
         <Text className={styles.description}>{description}</Text>
         <div className={styles.buttonWrapper}>
           <Link href={`${paths.blog}/${id}`}>

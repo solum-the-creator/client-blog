@@ -34,7 +34,7 @@ export const PostContent: React.FC<PostContentProps> = async ({ post, author }) 
         {post.title}
       </Heading>
       <div className={styles.postBody}>
-        <PostByLabel authorName={author.name} date={formatedDate} />
+        <PostByLabel authorName={author.name} authorId={author.id} date={formatedDate} />
         <Text variant="light" className={styles.description}>
           {post.description}
         </Text>

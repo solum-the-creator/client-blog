@@ -20,6 +20,7 @@ export const FeaturedPostBlock = async () => {
         <FeaturedPostCard
           id={post.id}
           author={author.name}
+          authorId={author.id}
           date={formatedDate}
           description={post.description}
           title={post.title}

@@ -19,11 +19,17 @@ export const HoverablePostCard: React.FC<HoverablePostCardProps> = ({
   id,
   title,
   authorName,
+  authorId,
   date,
 }) => {
   return (
     <div className={styles.hoverablePostCard}>
-      <PostByLabel authorName={authorName} date={date} colorVariant="secondary" />
+      <PostByLabel
+        authorName={authorName}
+        authorId={authorId}
+        date={date}
+        colorVariant="secondary"
+      />
       <Link href={`${paths.blog}/${id}`} className={styles.link}>
         <Heading level={4} className={styles.title}>
           {title}

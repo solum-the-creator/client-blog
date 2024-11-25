@@ -50,7 +50,12 @@ export const StandardPostCard: React.FC<StandardPostCardProps> = ({
           </Link>
         )}
         {author && (
-          <PostByLabel authorName={author.name} date={createdAt} colorVariant="secondary" />
+          <PostByLabel
+            authorName={author.name}
+            authorId={author.id}
+            date={createdAt}
+            colorVariant="secondary"
+          />
         )}
 
         <Link href={`${paths.blog}/${id}`}>

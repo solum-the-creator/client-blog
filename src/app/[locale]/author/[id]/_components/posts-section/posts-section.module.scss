@@ -1,0 +1,33 @@
+.postsSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 4rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 4rem 2rem;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @media screen and (max-width: 768px) {
+      gap: 2rem;
+    }
+
+    .postsList {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+
+      @media screen and (max-width: 768px) {
+        gap: 3rem;
+      }
+    }
+  }
+}

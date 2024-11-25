@@ -1,5 +1,6 @@
 import { Heading, Text } from '@solumzy/ui-lib-client-blog';
 
+import { paths } from '@/constants/paths';
 import { Link } from '@/i18n/routing';
 import { Social } from '@/types/social';
 
@@ -17,6 +18,7 @@ type AuthorCardProps = {
 };
 
 export const AuthorCard: React.FC<AuthorCardProps> = ({
+  id,
   name,
   position,
   imageSrc,
@@ -24,7 +26,11 @@ export const AuthorCard: React.FC<AuthorCardProps> = ({
 }) => {
   return (
     <div className={styles.authorCard}>
-      <Link href={'/blog'} className={styles.authorLink} aria-label={`Visit ${name}'s page`} />
+      <Link
+        href={`${paths.author}/${id}`}
+        className={styles.authorLink}
+        aria-label={`Visit ${name}'s page`}
+      />
 
       <div className={styles.imageWrapper}>
         <AvatarMask src={imageSrc} alt={name} size="large" />

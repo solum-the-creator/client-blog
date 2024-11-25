@@ -45,6 +45,10 @@
     "categories": "Kategorien",
     "tags": "Tags"
   },
+  "AuthorPage": {
+    "welcomeText": "Hallo, ich bin {name} und willkommen auf meinem Blog",
+    "myPosts": "Meine Beiträge"
+  },
   "Navbar": {
     "home": "Heim",
     "blog": "Blog",

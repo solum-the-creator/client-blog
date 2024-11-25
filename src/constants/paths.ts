@@ -5,4 +5,5 @@ export const paths = {
   contact: '/contact',
   privacy: '/privacy',
   category: '/category',
+  author: '/author',
 };

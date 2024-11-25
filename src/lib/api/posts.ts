@@ -136,3 +136,11 @@ export const fetchLimitedPostsWithAuthors = async (
 
   return postsWithAuthors;
 };
+
+export const fetchPostsByAuthor = async (authorId: string): Promise<Post[]> => {
+  const response = await fetch(`${BASE_URL}/posts?authorId=${authorId}`);
+  if (!response.ok) {
+    throw new Error('Failed to fetch posts');
+  }
+  return response.json();
+};

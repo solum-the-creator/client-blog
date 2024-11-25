@@ -58,6 +58,7 @@ export const Post: React.FC<PostProps> = ({ post, author }) => {
           <AuthorProfile
             imageSrc={author.avatar}
             name={author.name}
+            authorId={author.id}
             colorVariant="purple"
             date={post.createdAt}
           />

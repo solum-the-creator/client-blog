@@ -18,6 +18,7 @@ export const FeaturedPostSection = async () => {
           title={post.title}
           description={post.description}
           author={author.name}
+          authorId={author.id}
           date={formatedDate}
           imagePosition="side"
           withFeaturedText={true}

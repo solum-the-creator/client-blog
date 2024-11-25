@@ -2,6 +2,8 @@ import { Heading, Text } from '@solumzy/ui-lib-client-blog';
 import classNames from 'classnames';
 import { useTranslations } from 'next-intl';
 
+import { paths } from '@/constants/paths';
+import { Link } from '@/i18n/routing';
 import { formatDate } from '@/utils/date-formatter';
 
 import { AvatarMask } from '../avatar-mask/avatar-mask';
@@ -9,6 +11,7 @@ import { AvatarMask } from '../avatar-mask/avatar-mask';
 import styles from './author-profile.module.scss';
 
 type AuthorProfileProps = {
+  authorId: string;
   imageSrc: string;
   name: string;
   address?: string;
@@ -17,6 +20,7 @@ type AuthorProfileProps = {
 };
 
 export const AuthorProfile: React.FC<AuthorProfileProps> = ({
+  authorId,
   imageSrc,
   name,
   address,
@@ -28,13 +32,16 @@ export const AuthorProfile: React.FC<AuthorProfileProps> = ({
 
   return (
     <div className={styles.authorProfile}>
-      <div className={styles.imageWrapper}>
-        <AvatarMask src={imageSrc} alt={name} size="small" />
-      </div>
+      <Link href={`${paths.author}/${authorId}`} className={styles.link}>
+        <div className={styles.imageWrapper}>
+          <AvatarMask src={imageSrc} alt={name} size="small" />
+        </div>
+      </Link>
       <div className={styles.content}>
         <Heading level={4} className={classNames(styles.name, styles[colorVariant])}>
-          {name}
+          <Link href={`${paths.author}/${authorId}`}>{name}</Link>
         </Heading>
+
         {address && <Text as="span">{address}</Text>}
         {date && (
           <Text as="span">
