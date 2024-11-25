@@ -71,6 +71,17 @@
       "error": "Nachricht konnte nicht gesendet werden"
     }
   },
+  "PrivacyPage": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert am 27.Januar 2022",
+    "content": {
+      "title1": "Lorem ipsum Karotte",
+      "text1": "Lorem ipsum Schmerz sitzt am Arbeitsplatz, überwacht die Elite, aber es ist zeitweilig mit Arbeit und Schmerz verbunden. Wenn Sie nur auf ein Minimum verzichten, müssen Sie keine Arbeit verrichten, wenn Sie von einem commodo consequat bezahlt werden. Duis aute irure Schmerz im Tadel im voluptate velit esse cillum Schmerz eu fugiat nulla pariatur.Lorem ipsum Schmerz sitzt am Arbeitsplatz, überwacht die Elite, aber es ist zeitweilig mit Arbeit und Schmerz verbunden. Keine blanke Masse im ang. Scelerisque viverra mauris in der gleichen Farbe. Bei Risus viverra adipiscing in tellus. Sozius natoque penatibus und magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas durchm. Risus in hendrerit gravida rutrum quisque nicht. Setzen Sie sich auf null, um den morgendlichen Tempus iaculis urna zu erleichtern. Lorem, aber es ist extrem tristique, kein Aliquet im. Voluptatem blandit aliquam etiam erat velit. In: Orci eu lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla ausgesetzt. Bitte rufen Sie immer den Verkäufer an, wenn Sie Zeit haben.",
+      "title2": "Lorem ipsum tut mir leid, aber es ist Zeit, sich mit der Elite auseinanderzusetzen.",
+      "text2": "Lorem ipsum ist ein Schmerz, der sich auf die Elite auswirkt, aber vorübergehend auftritt, wenn Arbeit und Schmerz groß sind. Keine blanke Masse im ang. Scelerisque viverra mauris in der gleichen Farbe. Bei Risus viverra adipiscing in tellus. Sozius natoque penatibus und magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas durchm. Risus in hendrerit gravida rutrum quisque nicht. Setzen Sie sich auf null, um den morgendlichen Tempus iaculis urna zu erleichtern. Lorem, aber es ist extrem tristique nulla aliquet enim. Voluptatem blandit aliquam etiam erat velit. In: Orci eu lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla ausgesetzt. Bitte rufen Sie immer den Verkäufer an, wenn Sie Zeit haben.",
+      "text3": "Lorem ipsum ist ein Schmerz, der sich auf die Elite auswirkt, aber vorübergehend auftritt, wenn Arbeit und Schmerz groß sind. Keine blanke Masse im ang. Scelerisque viverra mauris in der gleichen Farbe. Bei Risus viverra adipiscing in tellus. Sozius natoque penatibus und magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas durchm. Risus in hendrerit gravida rutrum quisque nicht. Setzen Sie sich auf null, um den morgendlichen Tempus iaculis urna zu erleichtern. Lorem, aber es ist extrem tristique nulla aliquet enim. Voluptatem blandit aliquam etiam erat velit. In: Orci eu lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla ausgesetzt. Bitte rufen Sie immer den Verkäufer an, wenn Sie Zeit haben."
+    }
+  },
   "Navbar": {
     "home": "Heim",
     "blog": "Blog",
