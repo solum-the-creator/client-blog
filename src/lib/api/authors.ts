@@ -1,6 +1,6 @@
 import { Author } from '@/types/authors';
 
-const BASE_URL = 'https://673665a2aafa2ef22230699e.mockapi.io/api/v1';
+const BASE_URL = process.env.BASE_URL;
 
 export const fetchAuthorById = async (id: string): Promise<Author | null> => {
   try {

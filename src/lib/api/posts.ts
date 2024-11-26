@@ -2,7 +2,7 @@ import { Author } from '@/types/authors';
 import { CategoryName } from '@/types/category';
 import { Post, PostWithContent } from '@/types/post';
 
-const BASE_URL = 'https://673665a2aafa2ef22230699e.mockapi.io/api/v1';
+const BASE_URL = process.env.BASE_URL;
 
 export const fetchPostById = async (id: string): Promise<PostWithContent | null> => {
   try {
