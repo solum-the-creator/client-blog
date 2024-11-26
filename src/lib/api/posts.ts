@@ -5,12 +5,18 @@ import { Post, PostWithContent } from '@/types/post';
 const BASE_URL = 'https://673665a2aafa2ef22230699e.mockapi.io/api/v1';
 
 export const fetchPostById = async (id: string): Promise<PostWithContent | null> => {
-  const response = await fetch(`${BASE_URL}/posts/${id}`);
-  if (!response.ok) {
-    throw new Error('Failed to fetch post');
+  try {
+    const response = await fetch(`${BASE_URL}/posts/${id}`);
+    if (response.status === 404) {
+      return null;
+    }
+    if (!response.ok) {
+      throw new Error(`Failed to fetch post with ID: ${id}`);
+    }
+    return await response.json();
+  } catch {
+    return null;
   }
-
-  return response.json();
 };
 
 export const fetchPostAndAuthorById = async (

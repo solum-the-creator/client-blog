@@ -1,10 +1,7 @@
 import { Metadata } from 'next';
-import { Sen } from 'next/font/google';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 
-import { Footer } from '@/components/footer/footer';
-import { Header } from '@/components/header/header';
+import BaseLayout from '@/components/base-layout/base-layout';
 import { Locale, routing } from '@/i18n/routing';
 
 import '@solumzy/ui-lib-client-blog/dist/index.css';
@@ -16,8 +13,6 @@ type RootLayoutProps = {
     locale: Locale;
   }>;
 };
-
-const sen = Sen({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'] });
 
 export const generateStaticParams = () => {
   return routing.locales.map((locale) => ({ locale }));
@@ -34,17 +29,5 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
 
   setRequestLocale(currentLocal);
 
-  const messages = await getMessages();
-
-  return (
-    <html lang={currentLocal}>
-      <body className={sen.className}>
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="main">{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  );
+  return <BaseLayout locale={currentLocal}>{children}</BaseLayout>;
 }
