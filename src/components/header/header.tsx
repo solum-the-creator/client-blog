@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Button } from '@solumzy/ui-lib-client-blog';
 import { useTranslations } from 'next-intl';
 
@@ -24,7 +25,9 @@ export const Header: React.FC = () => {
               {t('video')}
             </Button>
           </Link>
-          <ModalVideo videoUrl="https://www.youtube.com/embed/zRp4NS_eeGc?autoplay=1" />
+          <Suspense>
+            <ModalVideo videoUrl="https://www.youtube.com/embed/zRp4NS_eeGc?autoplay=1" />
+          </Suspense>
         </div>
 
         <BurgerMenu />
