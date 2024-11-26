@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import { Sen } from 'next/font/google';
-import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 
@@ -10,6 +9,13 @@ import { Locale, routing } from '@/i18n/routing';
 
 import '@solumzy/ui-lib-client-blog/dist/index.css';
 import '@/styles/global.scss';
+
+type RootLayoutProps = {
+  children: React.ReactNode;
+  params: Promise<{
+    locale: Locale;
+  }>;
+};
 
 const sen = Sen({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'] });
 
@@ -21,30 +27,21 @@ export const metadata: Metadata = {
   title: 'Client Blog',
 };
 
-type RootLayoutProps = {
-  children: React.ReactNode;
-  params: Promise<{
-    locale: Locale;
-  }>;
-};
-
 export default async function RootLayout({ children, params }: RootLayoutProps) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale)) {
-    notFound();
-  }
+  const currentLocal = routing.locales.includes(locale) ? locale : routing.defaultLocale;
 
-  setRequestLocale(locale);
+  setRequestLocale(currentLocal);
 
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={currentLocal}>
       <body className={sen.className}>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <main>{children}</main>
+          <main className="main">{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>
