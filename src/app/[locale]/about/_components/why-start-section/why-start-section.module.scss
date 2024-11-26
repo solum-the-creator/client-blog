@@ -1,0 +1,44 @@
+.whyStartSection {
+  margin-top: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 4rem;
+    flex-direction: column;
+  }
+
+  .textBlock {
+    width: 100%;
+    max-width: 32rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    max-width: 40rem;
+    position: relative;
+    aspect-ratio: 4 / 3;
+
+    &::before {
+      content: '';
+      bottom: -6%;
+      left: 20%;
+      position: absolute;
+      width: 10%;
+      height: 14%;
+      background-color: $purple;
+      border-radius: 50%;
+      z-index: 3;
+    }
+
+    .image {
+      object-fit: cover;
+    }
+  }
+}
