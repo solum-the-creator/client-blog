@@ -53,6 +53,7 @@ export const ReviewsCarousel: React.FC<ReviewsCarouselProps> = ({ items }) => {
 
       <div className={styles.footer}>
         <AuthorProfile
+          authorId="1"
           imageSrc="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
           name={items[currentIndex].author}
           address="New York, USA"
