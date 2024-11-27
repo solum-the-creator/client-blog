@@ -15,6 +15,7 @@ export const TagButton: React.FC<TagButtonProps> = ({ tagName, isSelected, onCli
     <button
       className={classNames({ [styles.selected]: isSelected }, styles.tagButton)}
       onClick={onClick}
+      data-testid="tag-button"
     >
       {tagName}
     </button>

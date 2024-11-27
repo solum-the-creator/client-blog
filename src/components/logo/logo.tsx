@@ -10,7 +10,7 @@ export const Logo: React.FC = async () => {
   const t = await getTranslations('Logo');
 
   return (
-    <Link href={paths.home} className={styles.logoLink}>
+    <Link href={paths.home} className={styles.logoLink} data-testid="logo">
       <Heading level={4} colorVariant="light">
         {t('title')}
       </Heading>

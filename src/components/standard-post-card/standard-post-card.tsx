@@ -45,7 +45,7 @@ export const StandardPostCard: React.FC<StandardPostCardProps> = ({
       </Link>
       <div className={styles.content}>
         {!isVertical && (
-          <Link href={`${paths.category}/${category}`}>
+          <Link href={`${paths.category}/${category}`} data-testid="post-category">
             <TextLabel text={category} colorVariant="secondary" />
           </Link>
         )}
@@ -58,7 +58,7 @@ export const StandardPostCard: React.FC<StandardPostCardProps> = ({
           />
         )}
 
-        <Link href={`${paths.blog}/${id}`}>
+        <Link href={`${paths.blog}/${id}`} data-testid="post-title">
           <Heading level={2} className={styles.title}>
             {title}
           </Heading>

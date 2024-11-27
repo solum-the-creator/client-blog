@@ -51,9 +51,10 @@ export const TagSearch: React.FC<TagSearchProps> = ({ selectedTags, onTagSelect 
         sizeVariant="medium"
         placeholder={t('searchPlaceholder')}
         className={styles.searchInput}
+        data-testid="tag-search-input"
       />
       {searchResults.length > 0 && (
-        <ul className={styles.resultsList}>
+        <ul className={styles.resultsList} data-testid="tag-search-result">
           {searchResults.map((tag) => (
             <li key={tag} className={styles.resultItem}>
               <button onClick={handleSelectTag(tag)} className={styles.resultButton}>

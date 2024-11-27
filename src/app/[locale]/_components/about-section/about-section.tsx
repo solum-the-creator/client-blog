@@ -25,7 +25,7 @@ export const AboutSection = () => {
               <Heading level={2}>{t('titleAbout')}</Heading>
               <Text>{t('textAbout')}</Text>
               <div>
-                <Link href={paths.about} className={styles.readMore}>
+                <Link href={paths.about} className={styles.readMore} data-testid="read-more-about">
                   {t('readMore')} {'>'}
                 </Link>
               </div>

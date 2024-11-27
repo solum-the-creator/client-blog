@@ -15,7 +15,7 @@ type CategoryListProps = {
 
 export const CategoryList: React.FC<CategoryListProps> = ({ mode, cardMode, currentCategory }) => {
   return (
-    <div className={classNames(styles.categoryList, styles[mode])}>
+    <div className={classNames(styles.categoryList, styles[mode])} data-testid="category-list">
       {categoriesList.map((category) => (
         <CategoryCard
           key={category.link}

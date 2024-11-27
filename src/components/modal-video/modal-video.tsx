@@ -29,11 +29,15 @@ export const ModalVideo: React.FC<ModalVideoProps> = ({ videoUrl }) => {
   }
 
   return createPortal(
-    <div className={styles.overlay} onClick={closeModal}>
+    <div className={styles.overlay} onClick={closeModal} data-testid="video-modal">
       <div className={styles.modal}>
         <div className={styles.modalHeader}>
           <Heading level={3}>{t('video')}</Heading>
-          <button className={styles.closeButton} onClick={closeModal}>
+          <button
+            className={styles.closeButton}
+            onClick={closeModal}
+            data-testid="video-modal-close"
+          >
             &times;
           </button>
         </div>

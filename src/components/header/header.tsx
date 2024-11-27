@@ -20,7 +20,7 @@ export const Header: React.FC = () => {
       <div className={styles.right}>
         <div className={styles.navbar}>
           <Navbar />
-          <Link href={'?showModal=true'}>
+          <Link href={'?showModal=true'} data-testid="video-modal-trigger">
             <Button type="button" variant="secondary" className={styles.videoButton}>
               {t('video')}
             </Button>

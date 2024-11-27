@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import { TextLabel } from '@/components/text-label/text-label';
+import { paths } from '@/constants/paths';
 import { Link } from '@/i18n/routing';
 
 import styles from './special-section.module.scss';
@@ -23,7 +24,11 @@ export const SpecialSection = () => {
             {t('title')}
           </Heading>
           <Text variant="secondary">{t('text')}</Text>
-          <Link href={'/about'} className={styles.readMore}>
+          <Link
+            href={paths.about}
+            className={styles.readMore}
+            data-testid="discover-our-story-button"
+          >
             <Button size="large">{t('buttonText')}</Button>
           </Link>
         </div>

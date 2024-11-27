@@ -16,7 +16,7 @@ export const AllPostsBlock = async () => {
     <div className={styles.allPostsBlock}>
       <div className={styles.header}>
         <Heading level={2}>{t('allPosts')}</Heading>
-        <Link href={paths.blog} className={styles.viewAll}>
+        <Link href={paths.blog} className={styles.viewAll} data-testid="view-all-posts">
           {t('viewAll')}
         </Link>
       </div>

@@ -19,7 +19,7 @@ export const JoinOurTeamSection = () => {
           <Text variant="secondary">{t('text')}</Text>
         </div>
         <div>
-          <Link href={paths.contact} className={styles.readMore}>
+          <Link href={paths.contact} className={styles.readMore} data-testid="join-now">
             <Button size="large">{t('buttonText')}</Button>
           </Link>
         </div>

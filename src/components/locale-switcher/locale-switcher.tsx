@@ -34,6 +34,7 @@ export const LocaleSwitcher: React.FC = () => {
       options={options}
       colorVariant="secondary"
       className={styles.select}
+      data-testid="locale-select"
     />
   );
 };

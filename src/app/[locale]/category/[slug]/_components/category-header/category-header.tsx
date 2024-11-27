@@ -19,9 +19,11 @@ export const CategoryHeader: React.FC<CategoryHeaderProps> = ({ categoryName, de
     <section className={styles.categoryHeader}>
       <div className={styles.content}>
         <div className={styles.categoryText}>
-          <Heading variant="display" className={styles.title}>
-            {categoryName}
-          </Heading>
+          <div data-testid="category-heading">
+            <Heading variant="display" className={styles.title}>
+              {categoryName}
+            </Heading>
+          </div>
           <Text variant="secondary" className={styles.description}>
             {description}
           </Text>
