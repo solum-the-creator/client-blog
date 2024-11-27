@@ -15,7 +15,7 @@ export const BurgerMenu: React.FC = () => {
   };
 
   return (
-    <div className={styles.burgerMenu}>
+    <div className={styles.burgerMenu} data-testid="burger-menu">
       <button
         onClick={toggleMenu}
         className={classNames(styles.burgerIcon, { [styles.open]: isOpen })}
