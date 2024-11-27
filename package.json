@@ -14,11 +14,14 @@
     "@hookform/resolvers": "^3.9.1",
     "@solumzy/ui-lib-client-blog": "^1.0.5",
     "emailjs-com": "^3.2.0",
+    "mapbox-gl": "^3.8.0",
     "next": "15.0.3",
     "next-intl": "^3.25.1",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-hook-form": "^7.53.2",
+    "react-intersection-observer": "^9.13.1",
+    "react-map-gl": "^7.1.7",
     "zod": "^3.23.8"
   },
   "devDependencies": {
