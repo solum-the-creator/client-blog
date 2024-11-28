@@ -1,0 +1,70 @@
+.authorSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $purpleLight;
+  padding: 0 4rem;
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
+
+  .content {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 2rem;
+    padding: 8rem 0;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1.5rem;
+      background-color: $purple;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 75%;
+      height: 1.5rem;
+      background-color: $accent;
+      z-index: 5;
+    }
+
+    .imageWrapper {
+      position: relative;
+      width: 100%;
+      max-width: 16rem;
+      aspect-ratio: 3 / 4;
+
+      @media (max-width: 768px) {
+        flex: 1 0 auto;
+      }
+
+      .image {
+        object-fit: cover;
+      }
+    }
+
+    .authorInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 1.5rem;
+    }
+  }
+}

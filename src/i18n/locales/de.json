@@ -1,0 +1,152 @@
+{
+  "HomePage": {
+    "aboutSection": {
+      "labelAbout": "Über uns",
+      "titleAbout": "Wir sind eine Gemeinschaft von Content-Autoren, die ihre Erkenntnisse teilen",
+      "textAbout": "Bitte beachten Sie, dass dies ein sehr wichtiger, lohnenswerter und schmerzhafter Prozess ist, der sich jedoch nicht als vorübergehende Folge von Wehen und Fettleibigkeit überschneidet.",
+      "labelMission": "Unsere Mission",
+      "titleMission": "Erstellen wertvoller Inhalte für Kreative auf der ganzen Welt",
+      "textMission": "Bitte beachten Sie, dass dies ein sehr wichtiger, lohnenswerter und schmerzhafter Prozess ist, der sich jedoch nicht als vorübergehende Folge von Wehen und Fettleibigkeit überschneidet. Was den kleinsten Ansatz betrifft, kann jedes Training in einem unserer Bären nur dazu dienen, die Ziele zu erreichen. Befolgen Sie daher bitte die Anweisungen.",
+      "readMore": "Mehr lesen"
+    },
+    "categorySection": {
+      "title": "Wählen Sie eine Kategorie"
+    },
+    "specialSection": {
+      "label": "Warum wir angefangen haben",
+      "title": "Es begann als einfache Idee und entwickelte sich zu unserer Leidenschaft",
+      "text": "Bitte beachten Sie, dass dies ein sehr wichtiger, lohnenswerter und schmerzhafter Prozess ist, der sich jedoch nicht als vorübergehende Folge von Wehen und Fettleibigkeit überschneidet. Was die Mindestentschuldigungen betrifft, kann jede routinemäßige Nostradamus-Beschäftigung nur Ziele haben.",
+      "buttonText": "Unsere Geschichte >"
+    },
+    "authorsSection": {
+      "title": "Liste der Autoren"
+    },
+    "featuredLogoSection": {
+      "label": "Wir sind",
+      "title": "Vorgestellt in"
+    },
+    "testimonialsSection": {
+      "label": "Kundenmeinungen",
+      "title": "Was die Leute über unseren Blog sagen",
+      "text": "Vielen Dank für Ihre Hilfe, ich bin so froh, dass es Ihnen gefallen hat, aber ich bin so froh, dass es Ihnen gefallen hat."
+    }
+  },
+  "BlogPage": {
+    "allPosts": "Alle Beiträge",
+    "allCategories": "Alle Kategorien",
+    "prev": "Vorherige",
+    "next": "Nächsten"
+  },
+  "BlogPostPage": {
+    "readNext": "Was als nächstes zu lesen ist"
+  },
+  "CategoryPage": {
+    "searchPlaceholder": "Suche nach Tag...",
+    "categories": "Kategorien",
+    "tags": "Tags"
+  },
+  "AuthorPage": {
+    "welcomeText": "Hallo, ich bin {name} und willkommen auf meinem Blog",
+    "myPosts": "Meine Beiträge"
+  },
+  "ContactPage": {
+    "heading": {
+      "label": "Kontaktieren Sie uns",
+      "title": "Lass uns ein Gespräch beginnen",
+      "description": "Lorem ipsum ist ein Schmerz, der sich auf die Elite auswirkt, aber vorübergehend auftritt, wenn Arbeit und Schmerz groß sind. Ut enim ad minim."
+    },
+    "contactInfo": {
+      "workingHours": "Arbeitszeit",
+      "mondayToFriday": "Montag bis Freitag",
+      "mondayToFridayTime": "9:00 bis 8:00 Uhr",
+      "supportTime": "Unser Support-Team ist 24/7 verfügbar",
+      "contactUs": "Kontaktieren Sie uns"
+    },
+    "contactForm": {
+      "name": "Vollständiger Name",
+      "email": "Ihre E-Mail-Adresse",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "success": "Nachricht erfolgreich gesendet",
+      "error": "Nachricht konnte nicht gesendet werden"
+    }
+  },
+  "PrivacyPage": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert am 27.Januar 2022",
+    "content": {
+      "title1": "Lorem ipsum Karotte",
+      "text1": "Lorem ipsum Schmerz sitzt am Arbeitsplatz, überwacht die Elite, aber es ist zeitweilig mit Arbeit und Schmerz verbunden. Wenn Sie nur auf ein Minimum verzichten, müssen Sie keine Arbeit verrichten, wenn Sie von einem commodo consequat bezahlt werden. Duis aute irure Schmerz im Tadel im voluptate velit esse cillum Schmerz eu fugiat nulla pariatur.Lorem ipsum Schmerz sitzt am Arbeitsplatz, überwacht die Elite, aber es ist zeitweilig mit Arbeit und Schmerz verbunden. Keine blanke Masse im ang. Scelerisque viverra mauris in der gleichen Farbe. Bei Risus viverra adipiscing in tellus. Sozius natoque penatibus und magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas durchm. Risus in hendrerit gravida rutrum quisque nicht. Setzen Sie sich auf null, um den morgendlichen Tempus iaculis urna zu erleichtern. Lorem, aber es ist extrem tristique, kein Aliquet im. Voluptatem blandit aliquam etiam erat velit. In: Orci eu lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla ausgesetzt. Bitte rufen Sie immer den Verkäufer an, wenn Sie Zeit haben.",
+      "title2": "Lorem ipsum tut mir leid, aber es ist Zeit, sich mit der Elite auseinanderzusetzen.",
+      "text2": "Lorem ipsum ist ein Schmerz, der sich auf die Elite auswirkt, aber vorübergehend auftritt, wenn Arbeit und Schmerz groß sind. Keine blanke Masse im ang. Scelerisque viverra mauris in der gleichen Farbe. Bei Risus viverra adipiscing in tellus. Sozius natoque penatibus und magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas durchm. Risus in hendrerit gravida rutrum quisque nicht. Setzen Sie sich auf null, um den morgendlichen Tempus iaculis urna zu erleichtern. Lorem, aber es ist extrem tristique nulla aliquet enim. Voluptatem blandit aliquam etiam erat velit. In: Orci eu lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla ausgesetzt. Bitte rufen Sie immer den Verkäufer an, wenn Sie Zeit haben.",
+      "text3": "Lorem ipsum ist ein Schmerz, der sich auf die Elite auswirkt, aber vorübergehend auftritt, wenn Arbeit und Schmerz groß sind. Keine blanke Masse im ang. Scelerisque viverra mauris in der gleichen Farbe. Bei Risus viverra adipiscing in tellus. Sozius natoque penatibus und magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas durchm. Risus in hendrerit gravida rutrum quisque nicht. Setzen Sie sich auf null, um den morgendlichen Tempus iaculis urna zu erleichtern. Lorem, aber es ist extrem tristique nulla aliquet enim. Voluptatem blandit aliquam etiam erat velit. In: Orci eu lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla ausgesetzt. Bitte rufen Sie immer den Verkäufer an, wenn Sie Zeit haben."
+    }
+  },
+  "AboutPage": {
+    "headerSection": {
+      "label": "Über uns",
+      "title": "Wir sind ein Team von Content-Autoren, die ihre Erkenntnisse teilen",
+      "text": "Bitte beachten Sie, dass dies ein sehr wichtiger, lohnenswerter und schmerzhafter Prozess ist, der sich jedoch nicht als vorübergehende Folge von Wehen und Fettleibigkeit überschneidet. Was den kleinsten Ansatz betrifft, kann jedes Training in einem unserer Bären nur dazu dienen, die Ziele zu erreichen. Befolgen Sie daher bitte die Anweisungen."
+    },
+    "overviewSection": {
+      "blogs": "Veröffentlichte Blogs",
+      "views": "Ansichten über Finsweet",
+      "users": "Aktive Benutzer insgesamt"
+    },
+    "missionSection": {
+      "labelMission": "Unsere Mission",
+      "titleMission": "Erstellen wertvoller Inhalte für Kreative auf der ganzen Welt",
+      "textMission": "Bitte beachten Sie, dass dies ein sehr wichtiger, lohnenswerter und schmerzhafter Prozess ist, der sich jedoch nicht als vorübergehende Folge von Wehen und Fettleibigkeit überschneidet. Was den kleinsten Ansatz betrifft, kann jedes Training in einem unserer Bären nur dazu dienen, die Ziele zu erreichen. Befolgen Sie daher bitte die Anweisungen.",
+      "labelVision": "Unsere Vision",
+      "titleVision": "Eine Plattform, die es Einzelpersonen ermöglicht, sich zu verbessern",
+      "textVision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Labor et dolore magna aliqua. Nicht blandit Masse enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus."
+    },
+    "aboutTeamSection": {
+      "title": "Unser Team von Kreativen",
+      "secondaryTitle": "Bitte beachten Sie, dass dies ein sehr wichtiger Aspekt ist, aber tun Sie dies auf die gleiche Weise wie ein vorübergehender Zufall.",
+      "text": "Es tut mir leid, von Ihren Schmerzen zu hören, aber es tut mir so leid, von Ihrer harten Arbeit und Ihren Schmerzen zu hören. Was den kleinsten Ansatz betrifft, kann jedes Training in einem unserer Bären nur dazu dienen, die Ziele zu erreichen. Befolgen Sie daher bitte die Anweisungen. Ich schwöre, ich hatte Schmerzen, als ich weggelaufen bin."
+    },
+    "whyStartSection": {
+      "title": "Warum wir diesen Blog gestartet haben",
+      "secondaryTitle": "Bitte beachten Sie, dass dies ein sehr wichtiger Aspekt ist, aber tun Sie dies auf die gleiche Weise wie ein vorübergehender Zufall.",
+      "text": "Es tut mir leid, von Ihren Schmerzen zu hören, aber es tut mir so leid, von Ihrer harten Arbeit und Ihren Schmerzen zu hören. Was den kleinsten Ansatz betrifft, kann jedes Training in einem unserer Bären nur dazu dienen, die Ziele zu erreichen. Befolgen Sie daher bitte die Anweisungen. Ich schwöre, ich hatte Schmerzen, als ich weggelaufen bin."
+    },
+    "listAuthors": "Liste der Autoren"
+  },
+  "Navbar": {
+    "home": "Heim",
+    "blog": "Blog",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "privacy": "Datenschutz"
+  },
+  "Buttons": {
+    "video": "Video über uns",
+    "readMore": "Mehr lesen"
+  },
+  "Logo": {
+    "title": "Modsen Kunden Blog"
+  },
+  "Common": {
+    "postedOn": "Veröffentlicht am",
+    "by": "Von"
+  },
+  "Post": {
+    "featured": "Vorgestellter Beitrag",
+    "allPosts": "Alle Beiträge",
+    "viewAll": "Alle anzeigen"
+  },
+  "JoinOurTeamSection": {
+    "title": "Werden Sie Teil unseres Teams und werden Sie Teil unserer Geschichte",
+    "text": "Lorem ipsum tut mir leid, aber es ist wichtig, dass Sie zeitweilig etwas tun.",
+    "buttonText": "Jetzt beitreten"
+  },
+  "Footer": {
+    "subscribeBlock": {
+      "title": "Abonnieren Sie unseren Newsletter, um die neuesten Updates und Neuigkeiten zu erhalten",
+      "inputPlaceholder": "Ihre E-Mail-Adresse",
+      "buttonText": "Abonnieren",
+      "errorText": "Anmeldung fehlgeschlagen"
+    }
+  }
+}

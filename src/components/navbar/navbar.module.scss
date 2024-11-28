@@ -1,0 +1,24 @@
+.navbar {
+  color: $secondary;
+  display: flex;
+
+  .list {
+    display: flex;
+    gap: 1rem;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .item {
+      width: max-content;
+    }
+  }
+
+  .link {
+    &.active {
+      color: $accent;
+    }
+  }
+}

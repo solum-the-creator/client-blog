@@ -1,0 +1,15 @@
+.featuredPostBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .featuredPostCardWrapper {
+    padding: 2rem;
+    border: 1px solid $strokeLight;
+
+    @media screen and (max-width: 512px) {
+      padding: 0;
+      border: none;
+    }
+  }
+}

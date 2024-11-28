@@ -1,0 +1,36 @@
+.tagSearch {
+  width: 100%;
+  position: relative;
+
+  .resultsList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: $secondary;
+    border: 1px solid $stroke;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .resultItem {
+      .resultButton {
+        width: 100%;
+        padding: 8px 12px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid $stroke;
+        display: flex;
+        cursor: pointer;
+
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: $accentHover;
+        }
+      }
+    }
+  }
+}

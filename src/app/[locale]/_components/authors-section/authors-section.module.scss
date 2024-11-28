@@ -1,0 +1,29 @@
+.authorsSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+  padding: 0 5rem;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 4rem;
+    padding: 0 2rem;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    .authorList {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+}

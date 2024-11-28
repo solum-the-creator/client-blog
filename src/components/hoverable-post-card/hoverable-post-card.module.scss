@@ -1,0 +1,24 @@
+.hoverablePostCard {
+  width: 100%;
+  padding: 2rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+
+  &:hover {
+    background-color: $accentHover;
+    transform: translateY(-0.5rem);
+  }
+
+  .title {
+    max-width: 23rem;
+
+    @media screen and (max-width: 1024px) {
+      max-width: 100%;
+    }
+  }
+}
