@@ -68,7 +68,7 @@ export const ContactForm = () => {
 
   return (
     <div className={styles.contactForm}>
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      <form className={styles.form} onSubmit={handleSubmit(onSubmit)} data-testid="contact-form">
         <Input
           placeholder={t('name')}
           type="text"
@@ -76,6 +76,7 @@ export const ContactForm = () => {
           fullWidth={true}
           error={errors.fullName?.message}
           {...register('fullName')}
+          data-testid="contact-name-input"
         />
         <Input
           placeholder={t('email')}
@@ -84,6 +85,7 @@ export const ContactForm = () => {
           fullWidth={true}
           error={errors.email?.message}
           {...register('email')}
+          data-testid="contact-email-input"
         />
         <Select
           sizeVariant="large"
@@ -92,6 +94,7 @@ export const ContactForm = () => {
           options={queryOptions}
           error={errors.queryType?.message}
           {...register('queryType')}
+          data-testid="contact-query-select"
         />
         <TextArea
           placeholder={t('message')}
@@ -100,12 +103,19 @@ export const ContactForm = () => {
           rows={5}
           error={errors.message?.message}
           {...register('message')}
+          data-testid="contact-message-textarea"
         />
-        <div className={styles.message}>
+        <div className={styles.message} data-testid="contact-status">
           {status === 'success' && <Text className={styles.successMessage}>{t('success')}</Text>}
           {status === 'error' && <Text className={styles.errorMessage}>{t('error')}</Text>}
         </div>
-        <Button size="large" type="submit" fullWidth={true} disabled={isSubmitting}>
+        <Button
+          size="large"
+          type="submit"
+          fullWidth={true}
+          disabled={isSubmitting}
+          data-testid="contact-submit-button"
+        >
           {t('submit')}
         </Button>
       </form>
