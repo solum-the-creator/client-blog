@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl';
 
 import { emailConfig } from '@/constants/email-config';
 import { queryOptions } from '@/constants/query-options';
+import { FormStatus } from '@/types/form-status';
 
 import { ContactFormData, contactFormSchema } from './contact-form-schema';
 
@@ -25,7 +26,7 @@ export const ContactForm = () => {
     resolver: zodResolver(contactFormSchema),
   });
 
-  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<FormStatus>('idle');
 
   const onSubmit = async (data: ContactFormData) => {
     try {

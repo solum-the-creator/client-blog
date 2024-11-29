@@ -8,6 +8,7 @@ import { Button, Heading, Input } from '@solumzy/ui-lib-client-blog';
 import { useTranslations } from 'next-intl';
 
 import { emailConfig } from '@/constants/email-config';
+import { FormStatus } from '@/types/form-status';
 
 import { SubscribeFormData, subscribeSchema } from './subscribe-schema';
 
@@ -25,7 +26,7 @@ export const SubscribeBlock = () => {
     resolver: zodResolver(subscribeSchema),
   });
 
-  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<FormStatus>('idle');
 
   const onSubmit = async (data: SubscribeFormData) => {
     try {
