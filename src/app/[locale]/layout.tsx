@@ -2,8 +2,10 @@ import { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 
 import BaseLayout from '@/components/base-layout/base-layout';
+import { ToastContainer } from '@/components/toast-container/toast-container';
 import { Locale, routing } from '@/i18n/routing';
 
+import 'react-toastify/dist/ReactToastify.css';
 import '@solumzy/ui-lib-client-blog/dist/index.css';
 import '@/styles/global.scss';
 
@@ -29,5 +31,10 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
 
   setRequestLocale(currentLocal);
 
-  return <BaseLayout locale={currentLocal}>{children}</BaseLayout>;
+  return (
+    <BaseLayout locale={currentLocal}>
+      {children}
+      <ToastContainer />
+    </BaseLayout>
+  );
 }

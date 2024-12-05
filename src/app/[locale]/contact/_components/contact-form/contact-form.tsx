@@ -1,15 +1,14 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import emailjs from '@emailjs/browser';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Button, Input, Select, Text, TextArea } from '@solumzy/ui-lib-client-blog';
+import { Button, Input, Select, TextArea } from '@solumzy/ui-lib-client-blog';
 import { useTranslations } from 'next-intl';
 
 import { emailConfig } from '@/constants/email-config';
 import { queryOptions } from '@/constants/query-options';
-import { FormStatus } from '@/types/form-status';
 
 import { ContactFormData, contactFormSchema } from './contact-form-schema';
 
@@ -25,8 +24,6 @@ export const ContactForm = () => {
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
   });
-
-  const [status, setStatus] = useState<FormStatus>('idle');
 
   const onSubmit = async (data: ContactFormData) => {
     try {
@@ -53,19 +50,12 @@ export const ContactForm = () => {
         emailConfig.publicKey,
       );
 
-      setStatus('success');
+      toast.success(t('success'));
       reset();
     } catch {
-      setStatus('error');
+      toast.error(t('error'));
     }
   };
-
-  useEffect(() => {
-    if (status !== 'idle') {
-      const timer = setTimeout(() => setStatus('idle'), 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [status]);
 
   return (
     <div className={styles.contactForm}>
@@ -106,10 +96,6 @@ export const ContactForm = () => {
           {...register('message')}
           data-testid="contact-message-textarea"
         />
-        <div className={styles.message} data-testid="contact-status">
-          {status === 'success' && <Text className={styles.successMessage}>{t('success')}</Text>}
-          {status === 'error' && <Text className={styles.errorMessage}>{t('error')}</Text>}
-        </div>
         <Button
           size="large"
           type="submit"
